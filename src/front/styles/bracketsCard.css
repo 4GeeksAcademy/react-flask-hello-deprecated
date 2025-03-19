@@ -1,0 +1,35 @@
+.bracketCard__container {
+  background-color: #f8f9fa;
+}
+
+.bracketCard__round {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+
+  max-height: 500px;
+  flex-shrink: 0;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bracketCard__roundTitle {
+  min-height: 65px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bracketCard__team {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.bracketCard__h3 {
+  color: #007bff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}

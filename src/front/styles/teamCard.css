@@ -1,0 +1,24 @@
+.TeamCard__card {
+    width: 160px;
+    height: flex;
+
+    text-align: center;
+
+    margin: 25px;
+    padding: 15px;
+    border-radius: 10px;
+
+    background-color: white;
+    border: solid 1px grey;
+    color:black;
+}
+
+.TeamCard__card--position {
+    padding: 0px 5px 0px 5px;
+    margin-right: 10px;
+
+    border-radius: 7px;
+
+    background-color: darkblue;
+    color: white;
+}

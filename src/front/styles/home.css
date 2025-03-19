@@ -5,3 +5,32 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+.home__section-1 {
+    background-color: #d1e7dd; /* Color de fondo para la sección 1 */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen dentro de la sección */
+    background-repeat: no-repeat; /* Evita que la imagen se repita si es más pequeña */
+    min-height: 75vh; /* Asegura que la sección tenga al menos 300px de altura */
+    color: white; /* Cambia el color del texto para que sea legible sobre la imagen */
+    padding: 20px;
+    /* filter: grayscale(100%);*/
+  }
+
+.home__section-1--bg{
+    background: linear-gradient(to right, rgb(14, 71, 146), rgb(138, 68, 21));
+    padding: 30px;
+}
+
+.home__section-2 {
+    min-height: 35vh;
+    padding: 200px 0px;
+  }
+
+  .home__section-3{
+    min-height: 40vh;
+    padding: 200px 0px;
+  }
+
+  .home__capitalize--p::first-letter {
+    text-transform: uppercase;
+}
