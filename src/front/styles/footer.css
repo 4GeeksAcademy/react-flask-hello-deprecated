@@ -1,0 +1,8 @@
+.footer__button--hover {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer__button--hover:hover {
+    background-color: #f0f0f098;
+    transform: scale(1.1);
+}

@@ -73,9 +73,15 @@
 		]
 	},
 	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^6.7.2",
+		"@fortawesome/free-solid-svg-icons": "^6.7.2",
+		"@fortawesome/react-fontawesome": "^0.2.2",
+		"font-awesome": "^4.7.0",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
 		"react-dom": "^16.8.4",
+		"react-icons": "^5.4.0",
+		"react-phone-input-2": "^2.15.1",
 		"react-polyfills": "0.0.1",
 		"react-router-dom": "^6.3.0"
 	}
