@@ -10,6 +10,9 @@ from api.models import db
 from api.routes import api
 from api.admin import setup_admin
 from api.commands import setup_commands
+from flask_jwt_extended  import JWTManager
+import cloudinary
+import stripe
 
 # from models import Person
 
@@ -17,7 +20,18 @@ ENV = "development" if os.getenv("FLASK_DEBUG") == "1" else "production"
 static_file_dir = os.path.join(os.path.dirname(
     os.path.realpath(__file__)), '../public/')
 app = Flask(__name__)
+app.config["JWT_SECRET_KEY"] = os.getenv("FLASK_APP_KEY", "la_clave")
+jwt = JWTManager(app)
+
 app.url_map.strict_slashes = False
+
+#cloudinary config
+cloudinary.config( 
+    cloud_name = os.getenv('CLOUDINARY_CLOUD_NAME'), 
+    api_key = os.getenv('CLOUDINARY_API_KEY'), 
+    api_secret = os.getenv('CLOUDINARY_API_SECRET'), # Click 'View API Keys' above to copy your API secret
+    secure=True
+)
 
 # database condiguration
 db_url = os.getenv("DATABASE_URL")
