@@ -1,11 +1,13 @@
 
 
-from flask import request, jsonify, current_app
+from flask import request, jsonify, current_app, Blueprint
 from werkzeug.security import check_password_hash
 from datetime import datetime, timedelta
 import jwt
 from functools import wraps
 from .models import User  # Asegúrate de la ruta correcta al modelo User
+
+api = Blueprint('api', __name__)
 
 def generate_access_token(user):
     expires = datetime.utcnow() + current_app.config['JWT_ACCESS_TOKEN_EXPIRES']
@@ -43,7 +45,7 @@ def token_required(f):
         return f(current_user, *args, **kwargs)
     return decorator
 
-@app.route('/login', methods=['POST'])
+@api.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
     email = data.get('correo')
@@ -60,7 +62,7 @@ def login():
     else:
         return jsonify({'message': 'Credenciales inválidas'}), 401
 
-@app.route('/protected', methods=['GET'])
+@api.route('/protected', methods=['GET'])
 @token_required
 def protected(current_user):
     return jsonify({'message': f'Esta es una ruta protegida para el usuario con ID: {current_user.id}'}), 200
