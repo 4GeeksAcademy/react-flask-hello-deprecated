@@ -1,22 +1,68 @@
-"""
-This module takes care of starting the API Server, Loading the DB and Adding the endpoints
-"""
-from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, User
-from api.utils import generate_sitemap, APIException
-from flask_cors import CORS
+
+
+from flask import request, jsonify, current_app, Blueprint
+from werkzeug.security import check_password_hash
+from datetime import datetime, timedelta
+import jwt
+from functools import wraps
+from .models import User  # Asegúrate de la ruta correcta al modelo User
 
 api = Blueprint('api', __name__)
 
-# Allow CORS requests to this API
-CORS(api)
-
-
-@api.route('/hello', methods=['POST', 'GET'])
-def handle_hello():
-
-    response_body = {
-        "message": "Hello! I'm a message that came from the backend, check the network tab on the google inspector and you will see the GET request"
+def generate_access_token(user):
+    expires = datetime.utcnow() + current_app.config['JWT_ACCESS_TOKEN_EXPIRES']
+    payload = {
+        'user_id': user.id,
+        'exp': expires
     }
+    token = jwt.encode(payload, current_app.config['JWT_SECRET_KEY'], algorithm='HS256')
+    return token
 
-    return jsonify(response_body), 200
+def token_required(f):
+    @wraps(f)
+    def decorator(*args, **kwargs):
+        token = None
+        if 'Authorization' in request.headers:
+            auth_header = request.headers['Authorization']
+            try:
+                bearer, token = auth_header.split()
+                if bearer != 'Bearer':
+                    return jsonify({'message': 'El token debe ser Bearer'}), 401
+            except ValueError:
+                return jsonify({'message': 'Formato de token no válido'}), 401
+
+        if not token:
+            return jsonify({'message': 'Token requerido'}), 401
+
+        try:
+            data = jwt.decode(token, current_app.config['JWT_SECRET_KEY'], algorithms=['HS256'])
+            current_user = User.query.get(data['user_id'])
+        except jwt.ExpiredSignatureError:
+            return jsonify({'message': 'Token expirado'}), 401
+        except jwt.InvalidTokenError:
+            return jsonify({'message': 'Token inválido'}), 401
+
+        return f(current_user, *args, **kwargs)
+    return decorator
+
+@api.route('/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    email = data.get('correo')
+    password = data.get('contraseña')
+
+    if not email or not password:
+        return jsonify({'message': 'Correo y contraseña son obligatorios'}), 400
+
+    user = User.query.filter_by(email=email).first()
+
+    if user and user.check_password(password):
+        access_token = generate_access_token(user)
+        return jsonify({'access_token': access_token}), 200
+    else:
+        return jsonify({'message': 'Credenciales inválidas'}), 401
+
+@api.route('/protected', methods=['GET'])
+@token_required
+def protected(current_user):
+    return jsonify({'message': f'Esta es una ruta protegida para el usuario con ID: {current_user.id}'}), 200
