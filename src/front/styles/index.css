@@ -1,3 +1,25 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+body {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; 
+    font-style: normal;
+    color: #1E3E6D;
+  }
+
+
+#formRegistro{
+background-color: aliceblue;
+}
+  #registro{
+    background-color: #00D1B2;
+    color: aliceblue;
+  }
+
+  #cancelar {
+    background-color: #FF3860;
+    color: aliceblue;
+    margin: 15px;
+  }

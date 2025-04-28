@@ -20,3 +20,13 @@ def handle_hello():
     }
 
     return jsonify(response_body), 200
+
+@api.route('/sign-up', methods=['POST'])
+def sign_up():
+    data =request.get_json()
+
+    response_body = {
+        "message": "Hello! I'm a message that came from the backend, check the network tab on the google inspector and you will see the GET request"
+    }
+
+    return jsonify(response_body), 200
