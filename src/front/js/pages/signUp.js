@@ -3,12 +3,13 @@ import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { Formulario } from "../component/formulario.jsx";
 
-export const Home = () => {
+export const SignUp = () => {
 	const { store, actions } = useContext(Context);
-
+	console.log(store.user);
 	return (
 		<div className="text-center mt-5">
-			<h1>Hello world!</h1>
+			<Formulario type={'register'}/>
 		</div>
 	);
 };
+

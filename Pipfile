@@ -20,6 +20,7 @@ flask-admin = "*"
 typing-extensions = "*"
 flask-jwt-extended = "==4.6.0"
 wtforms = "==3.1.2"
+werkzeug = "*"
 
 [requires]
 python_version = "3.10"

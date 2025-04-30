@@ -4,12 +4,21 @@ import ScrollToTop from "./component/scrollToTop";
 import { BackendURL } from "./component/backendURL";
 
 import { Home } from "./pages/home";
-import { Demo } from "./pages/demo";
-import { Single } from "./pages/single";
+import { Login } from "./pages/login.js";
+import { SignUp } from "./pages/signUp.js";
+import { Player } from "./pages/playerInfo.js";
+import { EditPlayer } from "./pages/editPlayerInfo.js";
+import { HostProfile } from "./pages/hostProfile.js";
+import { HostProfileEdit } from "./pages/hostProfileEdit.js";
+
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { CreateTournament } from "./pages/createTournament.js";
+import { TournamentList } from "./pages/tournamentList.js";
+import { TournamentDetails } from "./pages/tournamentDetails.js";
+
 
 //create your first component
 const Layout = () => {
@@ -26,9 +35,17 @@ const Layout = () => {
                     <Navbar />
                     <Routes>
                         <Route element={<Home />} path="/" />
-                        <Route element={<Demo />} path="/demo" />
-                        <Route element={<Single />} path="/single/:theid" />
-                        <Route element={<h1>Not found!</h1>} />
+                        <Route element={<Home />} path="/home" />
+                        <Route element={<Login />} path="/login" />
+                        <Route element={<SignUp />} path="/signup" />
+                        <Route element={<Player />} path="/player/profile" />
+                        <Route element={<EditPlayer />} path="player/editProfile" />
+                        <Route element={<TournamentList />} path="/tournaments" />
+                        <Route element={<TournamentDetails />} path="/tournaments/:id" />
+                        <Route element={<CreateTournament />} path="/create_tournament" />
+                        <Route element={<HostProfile />} path="/host/profile" />
+                        <Route element={<HostProfileEdit />} path="/host/editProfile" />
+                        <Route element={<h1>Not found!</h1>} path="/single/:theid" />
                     </Routes>
                     <Footer />
                 </ScrollToTop>
