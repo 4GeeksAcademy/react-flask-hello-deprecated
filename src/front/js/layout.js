@@ -9,8 +9,7 @@ import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import Registro from "./pages/registro";
-
+import Registro from "./pages/registro";git 
 import DetalladoDeOrden from "./pages/DetalladoDeOrden.jsx";
 import { Freelance } from "./pages/freelance";
 
