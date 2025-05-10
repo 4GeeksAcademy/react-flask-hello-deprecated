@@ -10,6 +10,8 @@ from api.models import db
 from api.routes import api
 from api.admin import setup_admin
 from api.commands import setup_commands
+from flask_jwt_extended import JWTManager 
+from datetime import timedelta
 
 # from models import Person
 
@@ -30,6 +32,10 @@ else:
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 MIGRATE = Migrate(app, db, compare_type=True)
 db.init_app(app)
+
+app.config["JWT_ACCESS_TOKEN_EXPIRE"] = timedelta(hours=1) 
+jwt = JWTManager(app)
+
 
 # add the admin
 setup_admin(app)

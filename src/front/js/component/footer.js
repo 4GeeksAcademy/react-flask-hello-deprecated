@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 
-export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center">
-		<p>
-			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
-		</p>
-	</footer>
-);
+export const Footer = () => {
+	return (
+		<div className="card text-center" style={{maxWidth:"100%"}}>
+		<div className="card-header">
+		  Footer
+		</div>
+		<div className="card-body">
+		  <h5 className="card-title">Special title treatment</h5>
+		  <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+		</div>
+	  </div>
+	);
+};
