@@ -1,0 +1,67 @@
+/* PARTE IZQUIERDA */
+.custom1-container {
+    background-color: #5614f0;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-login:hover {
+    background-color: #200563;
+}
+
+/* PARTE DERECHA */
+.custom2-container {
+    width: 60%;
+    height: 100%;
+}
+
+.text-violet2 {
+    color: #5614f0;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.form-control {
+    background-color: #f7f7f7;
+}
+
+#btnSingup {
+    background-color: #5614f0;
+    color: white;
+    border: none;
+}
+
+#btnSingup:hover {
+    background-color: #200563;
+}
+
+.btn-signin:hover {
+    background-color: #200563;
+}
+
+.custom-container {
+    padding: 30px;
+    width: 100%;
+    max-width: 1200px;
+    height: 70vh;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+.form-control {
+    padding-left: 2rem;
+}

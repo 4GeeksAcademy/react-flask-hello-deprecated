@@ -1,0 +1,48 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* Sección izquierda*/
+.bg-primary {
+    background-color: #7879F1 !important;
+}
+
+.bg-secondary {
+    background-color: #ffffff !important;
+}
+
+#btnSingup {
+    background-color: #5D5FEF;
+    color: white;
+    border: none;
+}
+
+#btnSingup:hover {
+    background-color: #7879F1;
+}
+
+/* Botones de redes sociales */
+.btn-light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-light:hover {
+    background-color: #f8f9fa;
+}
+
+/* Seccion derecha: Formulario */
+.form-control {
+    background-color: #cacaca;
+}
+
+.display-4, .display-5 {
+    font-weight: 500;
+}
+
+/* Sección de social media icons */
+i {
+    font-size: 15px;
+}
+
+
