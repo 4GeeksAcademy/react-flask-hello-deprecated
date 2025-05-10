@@ -1,10 +1,27 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
+import { Link } from "react-router-dom";
 
-export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center">
-		<p>
-			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
-		</p>
-	</footer>
-);
+import { Context } from "../store/appContext";
+
+
+
+
+export const Footer = () => {
+
+	const { store, actions } = useContext(Context);
+
+	return (
+		<footer className="footer mt-auto py-3 text-center">
+			<Link className="link" to="/about">
+				<div style={{ color: "white", textDecoration: "none" }}>About us</div>
+			</Link>
+
+			<div type="submit"
+				onClick={() => actions.setShowContactModal()}
+				style={{ color: "white", textDecoration: "none" }}>Contact us</div>
+
+			<div>CryptoScope &copy; 2024</div>
+			<div>Powered by CoinGecko</div>
+		</footer>
+	)
+};

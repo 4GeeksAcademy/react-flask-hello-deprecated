@@ -1,3 +1,331 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+
+/* Navbar CSS */
+
+
+
+
+
+
+
+/* Footer CSS */
+.footer {
+  border-top: 1px solid white;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.link,
+.link:link {
+  text-decoration: none;
+}
+.link:visited {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+.link:active {
+  text-decoration: none;
+}
+
+.about {
+  height: 670px;
+  width: 400px;
+  color: black;
+  background-color: white;
+  margin: auto;
+}
+/* .firstContactDiv {
+  height: 600px;
+} */
+
+
+.contact {
+  height: 85vh;
+  width: 36%;
+  color: black;
+  background-color: silver;
+  margin-left: 32%;
+  margin-right: 32%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+}
+.text {
+  width: 100%;
+  height: 50vh;
+  min-height: 20vh;
+  
+}
+.close{
+  font-size: 25px;
+}
+.mainModal{
+  border-radius: 5px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Landing page CSS */
+
+#landingPage {
+  display: grid;
+  background-color: black;
+}
+
+.previewBox {
+  margin: 4vh auto;
+  display: flex;
+  height: 550px;
+  scale: 0.1;
+  opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 85vh;
+}
+
+.previewPhoto {
+  height: 550px;
+  width: 450px;
+  box-shadow: 0px 0px 55px 10px #39ff14;
+  border-radius: 5%;
+  margin-left: 50px;
+  margin-right: 50px;
+  /* scale: .1; opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 90vh */
+}
+
+@keyframes fade-in {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.blurbContainer {
+  text-align: center;
+  margin: auto;
+}
+
+#switchToListing {
+  background-color: #39ff14;
+  border-color: black;
+  border-width: 3px;
+}
+
+#switchToListing:hover {
+  box-shadow: 0px 0px 35px 5px #39ff14;
+}
+
+.listingLogin {
+  background-color: #39ff14;
+  border-color: black;
+  border-width: 3px;
+}
+
+.listingLogin:hover {
+  box-shadow: 0px 0px 35px 5px #39ff14;
+}
+
+.blurb {
+  font-size: 30px;
+  width: 35vw;
+  margin-bottom: 2vh;
+  color: #39ff14;
+  /* scale: .1; opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 50vh */
+}
+
+
+/* Listing page CSS */
+
+.listing-page {
+  padding: 0px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.coin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.coin-table thead th {
+  background-color: #f4f4f4;
+  padding: 10px 15px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.coin-table tbody td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+
+.coin-table tbody tr:hover {
+  transform: translateY(-5px);
+  transition: transform ;
+}
+
+
+.coin-info {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+
+.coin-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.coin-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.coin-symbol {
+  color: #666;
+  font-size: 12px;
+}
+
+.trade-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.trade-button:hover {
+  background-color: #0056b3;
+}
+
+.coin-table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.coin-favorite{
+  display: flex;
+  padding: 8px 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* user dashboard CSS */
+
+#dashboardWhole {
+  display: flex;
+}
+#togglePages {
+  /* display:block; */
+  background-color: black;
+  color: #39ff14;
+  width: 11vw !important;
+}
+.nav-link {
+  color: #39ff14
+}
+.nav-pills .nav-link.active {
+  background-color: #39ff14;
+  color: black;
+  text-decoration: black;
+}
+#dashboardContent {
+  /* width: 90vw; */
+  width: fit-content;
+}
+
+
+/* Favorites CSS */
+
+/* .fav{
+  height: 85vh;
+} */
+
+#favoriteScreen {
+  /* display: flex;
+  flex-wrap: wrap; */
+  background-color: black;
+  justify-content: center;
+  margin-left: 0;
+  
+}
+
+.favCardOut {
+  padding: 5vw;
+  background-color: black;
+}
+
+.favCardIn {
+  border: 2px solid #39ff14;
+  background-color: #90978f;
+  border-radius: 2%;
+}
+
+.favCardTop {
+  padding-top: 2vh;
+  height: 25vh;
+  width: 20vw;
+  border-bottom: 2px solid black; 
+}
+
+.favCardBody {
+  background-color: #90978f;
+}
+
+.favMoreInfoButton {
+  background-color: #39ff14;
+  border-color: black;
+  border-width: 1px;
+}
+
+.favMoreInfoButton:hover {
+  box-shadow: 0px 0px 35px 5px #39ff14;
+}
+
+/* Wallet CSS */
+
+/* Overall Performance CSS */
+
+/* Login/singup modal */
+
+/* Contact us modal */
+
+/* about us page CSS */
