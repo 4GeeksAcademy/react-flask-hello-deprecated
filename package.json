@@ -73,6 +73,13 @@
 		]
 	},
 	"dependencies": {
+		"@cloudinary/react": "^1.13.1",
+		"@cloudinary/url-gen": "^1.21.0",
+		"@stripe/stripe-js": "^5.5.0",
+		"bootstrap": "^5.3.3",
+		"cloudinary-core": "^2.13.1",
+		"dotenv": "^16.4.7",
+		"jsonwebtoken": "^9.0.2",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
 		"react-dom": "^16.8.4",
