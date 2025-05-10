@@ -1,0 +1,194 @@
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-section {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  height: 500px;
+  justify-content: space-between;
+  background-color: #78A0AF;
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #78A0AF;
+  padding: 20px;
+}
+
+.logo-title {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.register-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.app-mockup {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mockup-device {
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.app-interface {
+  background-color: white;
+  padding: 20px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+}
+
+.app-logo img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.app-nav span {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.app-nav .active {
+  font-weight: bold;
+}
+
+.app-content {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.note-card {
+  background-color: #f3f4f6;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.note-title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.note-icon {
+  font-size: 1.5rem;
+}
+
+.add-button {
+  margin-top: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.footer-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.space-x-4 > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.space-x-3 > :not(:last-child) {
+  margin-right: 0.75rem;
+}
+
+.outer-frame {
+  background-color: rgb(49, 49, 49);
+  padding: 80px;
+  border-radius: 25px; /* Ajusta el radio del borde según sea necesario */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; /* Centra el recuadro horizontalmente */
+}
+
+.computer-frame {
+  position: relative; /* Necesario para posicionar el pseudo-elemento */
+  width: 700px; 
+  height: 500px; 
+  background-color: rgb(39, 39, 39); 
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.computer-frame::before {
+  content: "Preview Notes";
+  position: absolute;
+  top: -3px; /* Ajusta la posición según sea necesario */
+  left: 5px; /* Ajusta la posición según sea necesario */
+  font-size: 1.2rem; /* Ajusta el tamaño de la fuente según sea necesario */
+  color: rgb(175, 172, 172); /* Ajusta el color del texto según sea necesario */
+}
+
+.mockup-device {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}

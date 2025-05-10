@@ -1,0 +1,51 @@
+
+
+.textcolors{
+    color: #78A0AF;
+}
+
+.bordernav{
+    color: #78A0AF;
+    opacity: 1;
+}
+
+.margintop{
+    margin-top: -4px;
+}
+
+.marginloginright{
+    margin-right: 255px;
+}
+
+.marginlogintop{
+    
+    margin-top: 115px;
+}
+
+.bordercolor
+    {
+        border-color: #78A0AF;
+    }
+
+.marginresetleft{
+    margin-left: 85px;
+}
+
+.navbar a {
+    font-size: large;
+  }
+
+.marbotn{
+    margin-bottom: -8px;
+}
+
+.margintps
+{
+    margin-top: -10px;
+}
+
+.dropdown-menu a {
+    text-decoration: none !important;
+    color: inherit;
+}
+

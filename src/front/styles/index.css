@@ -1,3 +1,96 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+
+
+html, body {
+  height: 100%;
+  margin: 0px;
+}
+
+.backbutton{
+    background-color: #78A0AF;
+    opacity: 1;
+}
+
+.textcolors{
+    color: #78A0AF;
+}
+
+.bordernav{
+    color: #78A0AF;
+    opacity: 1;
+}
+
+.margintop{
+    margin-top: -4px;
+}
+
+.marginloginright{
+    margin-right: 255px;
+}
+
+.marginlogintop{
+    
+    margin-top: 115px;
+}
+
+.bordercolor
+    {
+        border-color: #78A0AF;
+    }
+
+.marginresetleft{
+    margin-left: 85px;
+}
+
+/* Estilos para el modo claro */
+.light-mode {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Modo claro */
+.light-mode {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Modo oscuro */
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  
+  /* Opcional: Personalizar el navbar */
+  .navbar {
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .dark-mode .navbar {
+    background-color: #222;
+  }
+  
+  .light-mode .navbar {
+    background-color: #f8f9fa;
+  }
+
+  .swal-custom-title {
+    margin-bottom: 10%;
+  
+  }
+  
+  .swal-custom-confirm-button {
+    background-color: #78A0AF!important;
+    color: white !important;
+    padding: 8px 16px !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+    transition: 0.3s ease-in-out !important;
+  }
+
+  .Marginrightdropdw{
+    margin-right: 55px;
+  }
+
+ 

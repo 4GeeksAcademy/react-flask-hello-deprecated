@@ -1,0 +1,1 @@
+//este componente fue creado para la vista de habitos.

@@ -1,0 +1,104 @@
+.edit-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px; /* Ajustado para separar las secciones */
+    padding: 20px;
+}
+
+.edit-profile-container main {
+    max-width: 500px; /* Reducido el ancho máximo */
+    text-align: center;
+    padding: 20px;
+    flex: 1; /* Permite que el main ocupe el espacio disponible */
+}
+
+.edit-profile-container .edit-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.edit-profile-container .edit-profile-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.2em;
+}
+
+.edit-profile-container .edit-profile-form input {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.edit-profile-container .edit-profile-form button {
+    background-color: #78A0AF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.edit-profile-container .avatar-section {
+    margin-top: 20px;
+    text-align: center;
+    max-width: 300px;
+    margin-left: 300px; /* Mueve la sección del avatar 300px a la derecha */
+}
+
+.edit-profile-container .avatar-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.edit-profile-container .avatar-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-profile-container .avatar-options label {
+    font-size: 1.2em;
+}
+
+.edit-profile-container .delete-account-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-container img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.avatar-container button {
+    background-color: #78A0AF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
