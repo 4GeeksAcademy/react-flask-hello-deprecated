@@ -4,10 +4,11 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+sqlalchemy = "*"
 
 [packages]
 flask = "*"
-sqlalchemy = "==1.4.46"
+sqlalchemy = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 flask-swagger = "*"
@@ -18,8 +19,9 @@ gunicorn = "*"
 cloudinary = "*"
 flask-admin = "*"
 typing-extensions = "*"
-flask-jwt-extended = "==4.6.0"
+flask-jwt-extended = "*"
 wtforms = "==3.1.2"
+flask-bcrypt = "*"
 
 [requires]
 python_version = "3.10"

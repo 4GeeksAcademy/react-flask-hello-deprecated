@@ -1,0 +1,47 @@
+.container-login{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.login-left{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.invalidAccount{
+    color: red;
+    font-weight: bold;
+}
+.buttons{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.buttons p{
+    margin-bottom: 10px;
+}
+.form-text{
+    font-size: 10px;
+}
+.input-container{
+    margin: 5px 0;
+
+}
+.hr-login{
+    margin: 15px 0 5px 0;
+}
+.create-user{
+ font-size: 15px;
+ width: 60%;
+}
+.login-user{
+    width: 90%;
+    font-size: 17px;
+}

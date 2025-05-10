@@ -1,0 +1,14 @@
+.scrollmenu {
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+    max-height: 80vh;
+}
+.card{
+    min-width: 18rem;
+    min-height: 10rem;  
+}
+.row{
+    padding: 2rem;
+    height: 100vh;
+}

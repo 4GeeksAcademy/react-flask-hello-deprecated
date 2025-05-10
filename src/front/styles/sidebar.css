@@ -1,0 +1,43 @@
+
+.sidebar {
+    min-width: 20vw;
+    height: 100vh;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+}
+
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.75);
+    transition: color 0.3s ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+
+.sidebar .nav-link svg,
+.sidebar .nav-link span {
+    margin-right: 8px;
+}
+
+.avatar{
+    border-radius:100%;
+}
+.logout{
+    color: red;
+}
+
+
+
+
+
+
+
+
+

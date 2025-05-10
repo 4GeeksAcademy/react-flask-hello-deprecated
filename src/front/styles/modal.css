@@ -1,0 +1,7 @@
+.add-item {
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	border-radius: 25%;
+	font-size: 1.8rem;
+}

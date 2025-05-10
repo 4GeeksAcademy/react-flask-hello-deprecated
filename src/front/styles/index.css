@@ -1,3 +1,125 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+/* IMPORTAR FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300;400;700&display=swap');
+
+/* VARIABLES DE COLOR */
+:root {
+    --primary: #010D87;
+    --background-light: #f5f5f5;
+    --background-dark: #424242;
+    --text-light: #010D87;
+    --text-dark: #f5f5f5;
+    --gray-light: #e0e0e0;
+    --gray-dark: #757575;
+}
+
+/* MODO OSCURO */
+[data-theme="dark"] {
+    --background-light: #212121;
+    --background-dark: #121212;
+    --text-light: #f5f5f5;
+    --text-dark: #010D87;
+    --gray-light: #424242;
+    --gray-dark: #bdbdbd;
+}
+
+/* APLICACIÓN GLOBAL */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ESTILOS PARA LOS TÍTULOS */
+h1, h2, h3 {
+    font-family: 'Anton', sans-serif;
+    color: var(--primary);
+}
+
+/* BOTÓN DE CAMBIO DE TEMA */
+.toggle-theme {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--primary);
+    color: var(--text-dark);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.toggle-theme:hover {
+    background: var(--gray-dark);
+}
+
+/* ESTILOS PARA BOTONES */
+.btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: "Anton", sans-serif;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0px 4px 10px rgba(1, 13, 135, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #0026ff;
+    box-shadow: 0px 6px 15px rgba(1, 13, 135, 0.5);
+}
+
+.btn-secondary {
+    background-color: var(--gray-light);
+    color: var(--primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--gray-dark);
+    color: white;
+}
+
+.btn-theme {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-theme:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* ESTILOS PARA EL MODO OSCURO */
+[data-theme="dark"] .btn-primary {
+    background-color: white;
+    color: var(--primary);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background-color: var(--gray-light);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.5);
+}
+
+[data-theme="dark"] .btn-theme {
+    color: white;
+    border-color: white;
+}
+
+[data-theme="dark"] .btn-theme:hover {
+    background-color: white;
+    color: var(--primary);
+}
