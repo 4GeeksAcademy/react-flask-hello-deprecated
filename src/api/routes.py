@@ -20,3 +20,35 @@ def handle_hello():
     }
 
     return jsonify(response_body), 200
+
+
+@api.route('/sign-up', methods=['GET'])
+def register_user():
+
+    response_body = {
+        "message": "here you will create a new user"
+    }
+
+    return jsonify(response_body), 200
+
+
+@api.route('/log-in', methods=['GET'])
+def log_in_user():
+
+    response_body = {
+        "message": "here you will create the log in page"
+    }
+
+    return jsonify(response_body), 200
+
+
+@api.route('/about-us', methods=['GET'])
+def about_us():
+
+    response_body = {
+        "message": "aqui saldra el about us de todos nosotros"
+    }
+
+    return jsonify(response_body), 200
+
+#
