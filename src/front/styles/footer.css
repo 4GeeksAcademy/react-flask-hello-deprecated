@@ -1,0 +1,12 @@
+.footer {
+    width: 100%;
+    margin-top: 3%;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    height: 6%;
+    background: linear-gradient(90deg,
+            var(--color-red) 0%,
+            var(--color-giants-orange) 50%,
+            var(--color-atomic-tangerine) 100%);
+}

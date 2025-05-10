@@ -1,0 +1,147 @@
+.artist-profile-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  
+  .artist-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .artist-header h1 {
+    margin: 80px;  /* Empuja el texto al centro */
+  }
+  
+  .artist-profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .artist-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+  
+  .artist-tabs button {
+    padding: 10px 20px;
+    background: var(--color-coquelicot);
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .artist-tabs button:hover {
+    background: var(--color-giants-orange);
+  }
+  
+  .artist-tabs button.active {
+    background: var(--color-black);
+  }
+  
+  .artist-content {
+    text-align: center;
+  }
+  
+  .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .images-container img {
+    max-width: 300px;
+    border-radius: 5px;
+  }
+  
+  .videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .video-wrapper {
+    width: 560px;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background: var(--color-orange-crayola);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .song-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .song-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid var(--color-black);
+    background: var(--color-orange-crayola);
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .like-button {
+    background: var(--color-green);
+    color: var(--color-white);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .like-button:hover {
+    background: var(--color-mauveine);
+  }
+  
+
+  .artist-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .follow-button {
+    margin-top: 10px;
+    background: var(--color-green);
+    color: var(--color-white);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .follow-button:hover {
+    background: var(--color-giants-orange);
+  }
+  

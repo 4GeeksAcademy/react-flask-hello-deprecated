@@ -1,19 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "../../styles/navbar.css";
 
 export const Navbar = () => {
-	return (
-		<nav className="navbar navbar-light bg-light">
-			<div className="container">
-				<Link to="/">
-					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-				</Link>
-				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
-					</Link>
-				</div>
-			</div>
-		</nav>
-	);
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    return (
+        <nav className="navbar">
+            <div className="container">
+                <Link to="/"  className="navbar-brand">SoundCript</Link>
+
+                {/* Icono de usuario (imagen por defecto) */}
+                <div className="user-menu">
+                <div className="user-icon" onClick={toggleMenu}>
+                    <img src="https://cdn-icons-png.flaticon.com/512/3106/3106921.png" alt="Perfil de Usuario" />
+                </div>
+
+                {/* Menú desplegable */}
+                <div className={`dropdown-menu ${menuOpen ? "show" : ""}`}>
+                    <Link to="/userProfile" className="dropdown-item" onClick={() => setMenuOpen(false)}>Perfil</Link>
+                    <Link to="/userdata" className="dropdown-item" onClick={() => setMenuOpen(false)}>Datos</Link>
+                    <Link to="/" className="dropdown-item" onClick={() => setMenuOpen(false)}>Logout</Link>
+                </div>
+                </div>
+            </div>
+        </nav>
+    );
 };
