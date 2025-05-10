@@ -1,0 +1,58 @@
+.card-numbers{
+    font-size: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: double;
+    
+}
+
+.card-title {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: double;
+
+}
+
+.btn-primary {
+    background-color: #78A0AF !important;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+   
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: double;
+    margin-top: 5px;
+}
+
+.animate {
+        animation:  changeThickness 1.5s infinite;
+
+}
+/* pomodoro.css */
+@keyframes changeThickness {
+    0% {
+      font-weight: normal;
+      text-shadow: none;
+    }
+    50% {
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+      font-weight: normal;
+      text-shadow: none;
+    }
+  }
+  
+
+ 

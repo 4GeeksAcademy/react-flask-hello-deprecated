@@ -1,0 +1,58 @@
+.footer-logo {
+  width: 50px;
+  height: auto;
+}
+
+.bg- {
+  background-color: #78A0AF;
+}
+
+.text-white {
+  color: white;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.space-x-4 > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.space-x-3 > :not(:last-child) {
+  margin-right: 0.75rem;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.hover\:opacity-100:hover {
+  opacity: 1;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.justify-between {
+  justify-content: space-between;
+}

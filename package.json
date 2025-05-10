@@ -35,7 +35,7 @@
 		"@babel/runtime": "^7.16.3",
 		"babel-eslint": "^10.1.0",
 		"babel-loader": "^8.2.3",
-		"babel-plugin-transform-class-properties": "^6.24.1",
+		"babel-plugin-transform-class-properties": "^6.10.2",
 		"bc-console": "0.0.2",
 		"css-loader": "^6.5.1",
 		"dotenv-webpack": "^7.0.3",
@@ -45,7 +45,7 @@
 		"eslint-plugin-react": "^7.27.1",
 		"eslint-webpack-plugin": "^3.1.1",
 		"file-loader": "^6.2.0",
-		"gh-pages": "^3.2.3",
+		"gh-pages": "^6.3.0",
 		"html-loader": "^3.0.1",
 		"html-webpack-plugin": "^5.5.0",
 		"parse-github-url": "^1.0.2",
@@ -73,10 +73,14 @@
 		]
 	},
 	"dependencies": {
+		"bootstrap": "^5.3.3",
+		"lucide-react": "^0.477.0",
 		"prop-types": "^15.6.1",
-		"react": "^16.8.4",
-		"react-dom": "^16.8.4",
+		"react": "^19.0.0",
+		"react-calendar": "^5.1.0",
+		"react-dom": "^19.0.0",
 		"react-polyfills": "0.0.1",
-		"react-router-dom": "^6.3.0"
+		"react-router-dom": "^6.3.0",
+		"sweetalert2": "^11.17.2"
 	}
 }

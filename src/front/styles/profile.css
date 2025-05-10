@@ -1,0 +1,78 @@
+.parent{
+    display: inline-flex;
+    align-items: center;
+}
+    
+
+div.calendar-container{
+    /* border-style: solid; */
+    
+    width: 400px;
+    background-color: #6fbed22e;
+   transform: scale(1.02);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10% 10% ;
+   
+    padding: 2% 2% 4% 0%;
+    
+
+}
+
+
+div.react-calendar{
+   
+    margin-left: 25px;
+    border-radius: 10% 10%;
+    background-color: #78a0af92;
+    justify-content: center;
+    padding: 2% 2% 2% 2%;
+    
+}
+
+h1{
+    color: #78A0AF;
+}
+h2{
+   
+    color:#78A0AF
+}
+
+a{
+    color: #78A0AF;
+    display: flex;
+    font-size:small;
+    margin-top: 5px;
+}
+
+
+
+div.btn-group{
+    background-color: #ffffff;
+    border-radius: 40% 40% 40% 40% !important;
+    transform: scale(1.5);
+
+}
+
+.btn-primary { /* Cambia el color cuando está seleccionado */
+    background-color: #78A0AF !important;
+    border-color: #78A0AF !important;
+}
+
+.btn-outline-primary { /* Borde azul cuando NO está seleccionado ese !important es para sobreescribir los valores de bootstrap*/
+    background-color: #ffffff !important;
+    border-color: #78A0AF !important;
+    color: #78A0AF !important;
+}
+
+button{
+    border-color: #78A0AF;
+    background-color: #78A0AF;
+    border-radius: 50% 50% 50% 50%;
+    color:#ffffff;
+    padding: 2% 1% 2% 1%;
+    
+}
+
+
+
