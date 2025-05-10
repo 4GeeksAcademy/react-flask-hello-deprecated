@@ -1,0 +1,32 @@
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin: 8px 0;
+}
+
+.product-card p {
+    color: #555;
+    margin: 8px 0;
+}
+
+.product-card button {
+    margin-top: 12px;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

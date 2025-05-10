@@ -1,0 +1,105 @@
+/* Estilo principal del navbar */
+.navbar {
+    background-color: #FF1517; /* Fondo principal */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del logo o nombre del sitio */
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #FEDC58; /* Cambio de color al pasar el ratón */
+}
+
+/* Contenedor de los botones */
+.navbar-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Botones modernos */
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #FEDC58; /* Color amarillo */
+    color: #FF1517; /* Texto rojo */
+}
+
+.primary-btn:hover {
+    background-color: #FFFFFF; /* Fondo blanco al pasar el ratón */
+    color: #FF1517;
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+.secondary-btn {
+    background-color: #FFFFFF; /* Fondo blanco */
+    color: #FF1517; /* Texto rojo */
+    border: 2px solid #FF1517; /* Borde rojo */
+}
+
+.secondary-btn:hover {
+    background-color: #FF1517; /* Fondo rojo al pasar el ratón */
+    color: #FFFFFF; /* Texto blanco */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+/* Links activos */
+.active-link button {
+    background-color: #0056b3; /* Fondo azul para enlace activo */
+    color: #FFFFFF; /* Texto blanco */
+}
+
+/* Estilo para usuario */
+.navbar-user {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #FF1517;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-buttons {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px; /* Incrementar espacio */
+    }
+
+    .btn {
+        width: 100%; /* Hacer que los botones ocupen el ancho completo */
+        text-align: center;
+    }
+}
+
+/* Estilo accesible para botones */
+.btn:focus {
+    outline: 3px solid #0056b3; /* Borde azul visible */
+    outline-offset: 2px;
+}
