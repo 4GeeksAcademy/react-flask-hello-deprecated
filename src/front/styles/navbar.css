@@ -1,0 +1,33 @@
+/* Estilo para los botones de Bootstrap */
+.navbar .btn {
+    font-size: 1rem !important; /* Tamaño de fuente consistente */
+    font-weight: bold !important; /* Peso de la fuente */
+    border-radius: 25px !important; /* Bordes redondeados */
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover para todos los botones */
+.navbar .btn:hover {
+    background-color: #FFB800 !important; /* Fondo amarillo fuerte al pasar el ratón */
+    transform: scale(1.05) !important; /* Efecto de zoom */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2) !important; /* Sombra */
+}
+
+/* Estado activo o focus del botón */
+.navbar .btn:active, .navbar .btn:focus {
+    background-color: #FFB800 !important; /* Fondo amarillo fuerte cuando está activo o en foco */
+    color: #FF1517 !important; /* Texto rojo */
+    border: 2px solid #FF1517 !important; /* Borde rojo para resaltar el botón */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2) !important; /* Sombra */
+}
+
+/* Estilo del logo */
+.navbar .navbar-brand img {
+    height: 90px !important; /* Aumentamos el tamaño del logo */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Efecto de transición al pasar el ratón */
+}
+
+.navbar .navbar-brand img:hover {
+    transform: scale(1.2) !important; /* Aumenta el tamaño del logo cuando pasa el ratón */
+    filter: brightness(1.2) !important; /* Efecto de resaltar el logo con brillo */
+}

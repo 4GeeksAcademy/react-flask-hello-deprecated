@@ -1,0 +1,60 @@
+/* productCard.css */
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* Fondo blanco para mayor contraste */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin: 8px 0;
+    color: #333; /* Color más oscuro para el texto del nombre */
+}
+
+.product-card p {
+    color: #555;
+    margin: 8px 0;
+    font-size: 1em;
+}
+
+.product-card button {
+    margin-top: 12px;
+    padding: 10px 16px;
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el ratón */
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-card .product-details {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+}
+
+.product-card .product-details .category {
+    font-size: 0.9em;
+    color: #888;
+}
