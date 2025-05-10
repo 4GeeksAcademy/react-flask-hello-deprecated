@@ -1,0 +1,82 @@
+.formLog {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 2rem;
+  padding: 20px;
+  background-image: linear-gradient(to right, rgba(31, 118, 146, 0.5), rgba(67, 56, 135, 0.5));
+  font-weight: 500;
+  align-self: center;
+  width: 100%;
+  margin: 20px 0¿5px;
+  color: white;
+}
+
+.inputFormLog {
+  margin: auto;
+  padding: 10px 20px;
+  width: 90%;
+}
+
+.formLog .formLog-control,
+.formLog .formLog-select {
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.formLog .formLog-control:focus,
+.formLog .formLog-select:focus {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2), inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-color: #0a3d62;
+  transform: scale(1.03);
+  z-index: 1;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+.spanLog {
+  color: white;
+  text-decoration: none;
+}
+
+.spanLog:hover {
+  text-decoration: underline white;
+}
+
+.LoginForm {
+  background: linear-gradient(45deg, #0a3d62, #3c6382, #3cfa);
+  min-height: 100vh;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  color: white;
+  animation: linearGradient 5s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes linearGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.loggin-logo-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  text-align: start;
+}

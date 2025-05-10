@@ -1,0 +1,204 @@
+import React, { useState, useEffect, useContext } from "react";
+import styled from "styled-components";
+import Calendario from "./Calendario.jsx";
+import BoxDisplay from "./BoxDisplay.jsx";
+import ParentGaugeChart from "./GaugeChart.jsx";
+import ParentDashboardTable from "./ParentDashboardTable.jsx";
+import { Context } from "../../store/appContext.js";
+import { Button, Carousel, Spinner } from "react-bootstrap";
+import "../../../styles/MainDashboard.css";
+import { get_student_avg } from "../../functions/clean_parent_data.js";
+
+const format_schedule_data = obj => {
+  let auxArr = [];
+  Object.keys(obj).forEach(key => {
+    auxArr.push(...obj[key]);
+  });
+
+  return auxArr;
+};
+const MainDashboard = ({ dataEvents, estudiantes }) => {
+  const { store } = useContext(Context);
+  const [studentSlide, setStudentSlide] = useState(0);
+  const [avgSlide, setAvgSlide] = useState(0);
+  const [avgInfo, setAvgInfo] = useState([]);
+
+  const handlePrevSlide = (value, changeFunction) => {
+    if (value > 0) {
+      changeFunction(value - 1);
+    }
+  };
+
+  const handleNextSlide = (value, count, changeFunction) => {
+    if (value < count - 1) {
+      changeFunction(value + 1);
+    }
+  };
+
+  useEffect(() => {
+    if (estudiantes) {
+      let promedios = estudiantes.map(get_student_avg);
+      setAvgInfo(promedios);
+    }
+  }, [estudiantes]);
+
+  return (
+    <Wrapper className="container-fluid">
+      <div className="row d-flex">
+        <div className="col-md-8 col-sm-12 ">
+          <Calendario eventos={format_schedule_data(dataEvents)} />
+        </div>
+        <div className="col-md-4 col-sm-12 ">
+          <BoxDisplay aspect="1/1" classname="align-items-center ">
+            {estudiantes.length == 0 ? (
+              <div className="w-100 h-100 d-flex justify-content-center align-items-center ">
+                <Spinner animation="border" variant="light" />
+              </div>
+            ) : (
+              <>
+                <div
+                  className={
+                    "d-flex gap-3 text-light text-center align-items-center"
+                  }>
+                  <i className="bi bi-list-check fs-1"></i>
+                  <h1>Promedio</h1>
+                </div>
+                <Carousel
+                  style={{ width: "100%" }}
+                  interval={null}
+                  indicators={false}
+                  controls={false}
+                  activeIndex={avgSlide}>
+                  {avgInfo
+                    ? avgInfo.map((student, index) => {
+                      return (
+                        <Carousel.Item
+                          className="text-light text-center"
+                          key={index}
+                          style={{ width: "100%", height: "100%" }}>
+                          <ParentGaugeChart
+                            max={20}
+                            value={student.promedio}
+                          />
+                          <h5 className=" mb-2">
+                            {" "}
+                            <i className="bi bi-mortarboard-fill me-3"></i>
+                            {student.nombre}
+                          </h5>
+                        </Carousel.Item>
+                      );
+                    })
+                    : ""}
+                </Carousel>
+                <div className="d-flex gap-2 mb-2 w-100 justify-content-around">
+                  <Button
+                    variant="light"
+                    className={`w-25 fadeInLeft`}
+                    onClick={() => handlePrevSlide(avgSlide, setAvgSlide)}>
+                    <i className="bi bi-arrow-bar-left"></i>
+                  </Button>
+
+                  <Button
+                    variant="light"
+                    className={`w-25 fadeInRight`}
+                    onClick={() =>
+                      handleNextSlide(avgSlide, estudiantes.length, setAvgSlide)
+                    }>
+                    <i className="bi bi-arrow-bar-right"></i>
+                  </Button>
+                </div>
+              </>
+            )}
+          </BoxDisplay>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12 d-flex justify-content-center align-items-center">
+          <BoxDisplay classname="align-items-center pt-3" flex="row" aspect="16/9">
+            {estudiantes.length == 0 ? (
+              <div className="w-100 h-100 d-flex justify-content-center align-items-center">
+                <Spinner animation="border" variant="light" />
+              </div>
+            ) : (
+              <>
+                {studentSlide > 0 ? (
+                  <Button
+                    variant="light"
+                    className={`ms-2 h-25 fadeInLeft`}
+                    onClick={() =>
+                      handlePrevSlide(studentSlide, setStudentSlide)
+                    }>
+                    <i className="bi bi-arrow-bar-left"></i>
+                  </Button>
+                ) : (
+                  " "
+                )}
+                <Carousel
+                  style={{ width: "100%" }}
+                  interval={null}
+                  indicators={false}
+                  controls={false}
+                  activeIndex={studentSlide}>
+                  {estudiantes ? (
+                    estudiantes.map((estudiante, index) => {
+                      return (
+                        <Carousel.Item key={index}>
+                          <TableWrapper>
+                            <div className={"d-flex gap-3 text-light"}>
+                              <h1 className="mb-5">{estudiante.nombre}</h1>
+                            </div>
+                            <ParentDashboardTable
+
+                              materias={estudiante.materias}
+                              studentId={estudiante.id}
+                            />
+                          </TableWrapper>
+                        </Carousel.Item>
+                      );
+                    })
+                  ) : (
+                    <h1 className="text-center">Loading Info</h1>
+                  )}
+                </Carousel>
+                {studentSlide < estudiantes.length - 1 ? (
+                  <Button
+                    variant="light"
+                    className={`me-2 h-25 fadeInRight`}
+                    onClick={() =>
+                      handleNextSlide(
+                        studentSlide,
+                        estudiantes.length,
+                        setStudentSlide
+                      )
+                    }>
+                    <i className="bi bi-arrow-bar-right"></i>
+                  </Button>
+                ) : (
+                  " "
+                )}
+              </>
+            )}
+          </BoxDisplay>
+        </div>
+      </div>
+    </Wrapper>
+  );
+};
+
+export default MainDashboard;
+
+const Wrapper = styled.div`
+  margin: 0 auto;
+  min-height: 100%;
+  background: none;
+`;
+
+const TableWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  width: 100%;
+`;

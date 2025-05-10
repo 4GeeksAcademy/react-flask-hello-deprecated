@@ -1,0 +1,74 @@
+  .slide {
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    color: gray;
+  }
+
+  .container {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: inset 20px 20px 60px #bebebe,
+      inset -20px -20px 60px #4c4b4b;
+  }
+
+  .carouselItem {
+    scale: 1;
+    transition: scale .6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    
+    @starting-style {
+      scale:0;
+    }
+  }
+
+  .userName {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: black;
+  }
+
+  .rating {
+    font-size: 2.5rem;
+    color: #ffaa00;
+    margin: 0.5rem 0;
+  }
+
+  .comment {
+    font-size: 2rem;
+    color: #055 ;
+    margin-top: 0.5rem;
+  }
+
+  .carousel .carousel-item p {
+    font-size: 1.1em;
+  }
+
+  .carousel .carousel-item h5 {
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+
+    .card,
+    .carousel {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .userName{
+      font-size: 30px;
+    }
+    .comment{
+      font-size:15px;
+    }
+  }

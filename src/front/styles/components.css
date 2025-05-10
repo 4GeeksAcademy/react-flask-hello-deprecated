@@ -1,0 +1,450 @@
+/* estilo para el contenedor del menú lateral */
+
+.left-menu-background {
+  background: linear-gradient(180deg,
+      rgba(43, 45, 66, 1) 0%,
+      rgba(28, 124, 153, 1) 63%,
+      rgba(0, 212, 255, 1) 100%)
+}
+
+/* estilos para el renderizado del contenedor de los formularios */
+
+.render-content {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  background-image: linear-gradient(to right, rgba(31, 118, 146, 0.5), rgba(67, 56, 135, 0.5));
+}
+
+/* Mensaje de bienvenida del dashboard*/
+
+.container-welcome-parent {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  /* height: 100vh; */
+}
+
+.container-welcome-teacher {
+  /* margin-left: 3rem; */
+  padding: 4rem;
+  width: 100%;
+  height: auto;
+  border-radius: 2rem;
+  background-image: linear-gradient(to right, rgba(31, 118, 146, 0.8), rgba(67, 56, 135, 0.8));
+
+}
+
+.welcome-message {
+  /* position: absolute; */
+  overflow-y: auto;
+
+}
+
+/* estilos para la barra de scroll */
+.welcome-message::-webkit-scrollbar {
+  width: 14px;
+  display: none;
+}
+
+.welcome-message::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.welcome-message::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #0d47a1, #0d47a1 25%, #3e7cc3 50%, #6094c8 75%, #8eb0ce);
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+.welcome-message::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg,
+      #0A74DA,
+      /* Azul brillante (primario) */
+      #00A3FF 25%,
+      /* Azul cian vibrante */
+      #0066FF 50%,
+      /* Azul medio clásico */
+      #0052CC 75%,
+      /* Azul profundo */
+      #002244
+      /* Azul marino oscuro */
+    );
+  border: 3px solid gainsboro;
+}
+
+/* ---------------- */
+
+.welcome-icon {
+  max-width: 60%;
+  width: 20%;
+  height: auto;
+  object-fit: contain;
+  margin-right: 1.3rem;
+}
+
+
+/*Estilos para títulos y contenidos*/
+
+
+.text-title {
+  color: white;
+  font-family: "Montserrat", serif;
+  font-style: normal;
+}
+
+.text-content {
+  color: white;
+  font-family: "Cantarell", serif;
+  font-style: normal;
+}
+
+.text-form {
+  font-family: "Montserrat", serif;
+  font-style: normal;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+/* Estilos para botón de registro del formulario */
+
+
+.btn-outline-register {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 3rem;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.btn-outline-register {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 6px 3px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.btn-outline-register:hover {
+  background: rgb(231, 236, 255);
+  color: black;
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.btn-outline-register:hover::before {
+  background-color: #fff;
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.btn-outline-register::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+.btn-outline-register:focus {
+  outline-style: solid;
+  outline-color: #2b2d42;
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.btn-outline-register:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+/* Estilo para botón de retorno del formulario */
+
+.btn-outline-cancel {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 3rem;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.btn-outline-cancel {
+  background: rgb(31, 135, 80);
+  box-shadow: 0 0 6px 3px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.btn-outline-cancel:hover {
+  background: rgb(231, 236, 255);
+  color: black;
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.btn-outline-cancel:hover::before {
+  background-color: #fff;
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.btn-outline-cancel::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+.btn-outline-cancel:focus {
+  outline-style: solid;
+  outline-color: #2b2d42;
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.btn-outline-cancel:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+/* Estilo para input de descripción de profesores*/
+
+.teacher-description {
+  border-radius: 1.5rem;
+  height: 6rem
+}
+
+/* Estilo para tablas en las secciones de edición de datos*/
+
+.table-design {
+  border-radius: 2rem;
+}
+
+
+/* Estilos para la opción de subir imagen en la vista de administrador*/
+
+
+.teacher-photo {
+  border: 2px solid #ffffff;
+  padding: .5rem;
+  border-radius: 2rem;
+  opacity: 1;
+}
+
+.select-image {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.select-image:hover {
+  background-color: #e1e1e1;
+  color: rgb(0, 0, 0);
+}
+
+.select-image:focus {
+  outline-style: solid;
+  outline-color: #2b2d42;
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+
+.select-image:active {
+  background-color: #2b2d42;
+  color: white;
+}
+
+
+/* Estilos para mouse over en los elementos del menú */
+
+
+.list-menu-item {
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  padding-top: .1rem;
+  padding-bottom: .2rem;
+  margin: 0 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.list-menu-item::before,
+.list-menu-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: all 0.5s;
+}
+
+.list-menu-item::before {
+  top: 0;
+  left: 0;
+}
+
+.list-menu-item::after {
+  bottom: 0;
+  right: 0;
+}
+
+.list-menu-item:hover::before {
+  width: 100%;
+  transition: width 0.25s ease-in-out;
+}
+
+.list-menu-item:hover::after {
+  width: 100%;
+  transition: width 0.25s ease-in-out 0.25s;
+}
+
+
+/* Estilos de mouse over para elementos de opción múltiple de los formularios */
+
+
+.custom-select {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 650;
+  border-radius: 0.3rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.custom-select:hover {
+  background-color: #e1e1e1;
+  color: rgb(0, 0, 0);
+}
+
+.custom-select-edit {
+  background-color: transparent;
+  border: 1px solid #e7e7e7;
+  color: #000000;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 200;
+  border-radius: 0.3rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.custom-select-edit:hover {
+  background-color: #e1e1e1;
+  color: rgb(0, 0, 0);
+}
+
+.custom-select>option {
+  color: #000000;
+}
+
+/* Estilos para tablas */
+
+.table-styles {
+  border-radius: 2rem;
+  background: #fff;
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  overflow: auto;
+}
+
+.react-datepicker-wrapper {
+  width: 100% !important;
+}
+
+.form-control::placeholder {
+  color: rgb(177, 165, 165);
+  opacity: 1;
+}

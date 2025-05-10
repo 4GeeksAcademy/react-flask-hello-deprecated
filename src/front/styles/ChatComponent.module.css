@@ -1,0 +1,20 @@
+.CardChat {
+    /* align-items: center; */
+    color: white;
+    font-weight: bold;
+    background-image: linear-gradient(to right, rgba(31, 118, 146, 0.5), rgba(67, 56, 135, 0.5));
+}
+
+.chatContainer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.5s ease-in-out, opacity 1.5s ease-in-out;
+    opacity: 0;
+}
+
+.chatContainerVisible {
+    max-height: 500px;
+    opacity: 1;
+    overflow: visible;
+
+}
