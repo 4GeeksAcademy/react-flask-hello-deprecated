@@ -7,7 +7,7 @@ verify_ssl = true
 
 [packages]
 flask = "*"
-sqlalchemy = "==1.4.46"
+sqlalchemy = "*"
 flask-sqlalchemy = "*"
 flask-migrate = "*"
 flask-swagger = "*"
@@ -18,8 +18,15 @@ gunicorn = "*"
 cloudinary = "*"
 flask-admin = "*"
 typing-extensions = "*"
-flask-jwt-extended = "==4.6.0"
 wtforms = "==3.1.2"
+click = "*"
+werkzeug = "*"
+pyjwt = "*"
+alembic = "*"
+pytest = "*"
+marshmallow = "*"
+psycopg2 = "*"
+flask-jwt-extended = "*"
 
 [requires]
 python_version = "3.10"
