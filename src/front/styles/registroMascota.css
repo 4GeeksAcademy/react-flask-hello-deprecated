@@ -1,0 +1,9 @@
+.fotoMascota {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinear elementos al inicio */
+}
+
+.fotoMascota img {
+    object-fit: cover; /* Para mantener la proporción de la imagen */
+}
