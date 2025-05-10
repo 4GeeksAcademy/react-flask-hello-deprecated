@@ -5,3 +5,155 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .registration-view-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e2efff, #ffffff);
+    padding: 20px;
+  }
+  
+  /* Form container */
+  .form-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Form title */
+  form h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+  
+  /* Input fields */
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 2px solid #d1d1d1;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Focus effect on inputs */
+  input:focus {
+    outline: none;
+    border-color: #5b8fcb;
+    background-color: #e8f0fe;
+  }
+  
+  /* Submit button */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #5b8fcb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect on button */
+  button:hover {
+    background-color: #3d6ea5;
+  }
+  
+  button:disabled {
+    background-color: #a0c6f1;
+    cursor: not-allowed;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Link styling for switching between login and signup */
+  p {
+    color: #5b8fcb;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect on links */
+  p:hover {
+    color: #3d6ea5;
+  }
+  
+  /* Animations for form entry */
+  .auth-form {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards;
+  }
+  
+  .auth-form.login-form {
+    animation-delay: 0.3s;
+  }
+  
+  .auth-form.signup-form {
+    animation-delay: 0.3s;
+  }
+  
+  /* Slide-in animation for forms */
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation for form container on hover */
+  .form-container:hover {
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    .form-container {
+      padding: 20px;
+    }
+  
+    form h2 {
+      font-size: 20px;
+    }
+  
+    input,
+    button {
+      font-size: 14px;
+    }
+  }

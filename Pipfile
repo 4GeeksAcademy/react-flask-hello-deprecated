@@ -18,7 +18,7 @@ gunicorn = "*"
 cloudinary = "*"
 flask-admin = "*"
 typing-extensions = "*"
-flask-jwt-extended = "==4.6.0"
+flask-jwt-extended = "*"
 wtforms = "==3.1.2"
 
 [requires]
