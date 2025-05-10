@@ -1,3 +1,69 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+
+.pet-form .form-label{
+    font-family: 'Aboreto';
+    font-weight: 400;
+    font-size: 16px;
+}
+.pet-form .form-control, .form-select{
+    font-family: 'Aboreto';
+    font-weight: 400;
+    font-size: 12px; 
+}
+
+.btn-publicar {
+    background-color: #003459;
+   font-family: 'ADLaM Display';
+}
+
+.post-title {
+    text-align: center;
+    font-family: 'ADLaM Display';
+    color: #003459; 
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+}
+.fa-light {
+    font-size: 28px;
+}
+
+.image-preview img {
+    width: 100px;
+    margin-right: 15px;
+}
+
+.adlam-display-regular {
+    font-family: "ADLaM Display", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  #root {
+    height: 100vh;
+  }
+
+  /*Tama;o del mapa*/
+  .leaflet-container {
+    height: 100vh;
+  }
+
+  .custom-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 37px;
+    color: red;
+  }
+
+  .leaflet-container {
+    height: 400px; 
+    width: 100%;
+  }

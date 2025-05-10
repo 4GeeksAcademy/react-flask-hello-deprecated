@@ -1,0 +1,92 @@
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de vista de mascotas (Filtros y tarjetas) */
+.pets-view {
+  display: flex; 
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Filtros */
+.filters {
+  width: 200px; /* Ajusta el ancho de los filtros */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 20px;
+}
+
+/* Categorías de filtros */
+.filter-category {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-category h3 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Estilo para los filtros (circulitos y cuadrados) */
+label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Círculos de color */
+.color-circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.color-circle.red {
+  background-color: red;
+}
+
+.color-circle.blue {
+  background-color: blue;
+}
+
+.color-circle.green {
+  background-color: green;
+}
+
+/* Cuadrados de tamaño */
+.size-square {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+}
+
+/* Contenedor principal de las tarjetas de mascotas */
+.pet-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: calc(100% - 220px); /* Ajusta el ancho para dar espacio a los filtros */
+}
+
+/* Tarjeta individual */
+.pet-card {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}

@@ -1,7 +1,208 @@
-/*
-    home.css: This website contains selectors only used in home.css
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+.adlam-display-regular {
+    font-family: "ADLaM Display";
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .nunito {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+
+body {
+    background-image: url('/workspaces/Rosas-Alonso-Rodriguez-Acu-a-y-Chaves-Proyecto-final/src/front/img/banner.PNG');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.btnStart{
+  background-color: darkblue;
+}
+
+.forgot-password {
+  border-radius: 20px;
+}
+
+/* Contenedor principal */
+.pet-card-container {
+  max-width: 80%;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Diseño 50/50 */
+.pet-card {
+  display: flex;
+  gap: 20px;
+}
+
+.image-section {
+  flex: 1;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.info-section {
+  flex: 1;
+  padding: 10px;
+}
+
+.info-section h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.text-danger {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+a.btn-primary {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+a.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.table {
+  margin-top: 15px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.table td {
+  padding: 5px 0;
+}
+
+p {
+  font-size: 14px;
+}
+
+.additional-info {
+  margin-top: 15px;
+  font-style: italic;
+}
+
+/* Galería */
+.gallery {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.gallery img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Íconos de compartir */
+.share-icons span {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.share-icons a {
+  color: #6c757d;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.share-icons a:hover {
+  color: #007bff;
+}
+.filters-container {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.filters-container h5 {
+  margin-bottom: 15px;
+}
+
+.filter label {
+  font-weight: bold;
+}
+
+.filter input[type="radio"] {
+  margin-right: 10px;
+}
+.main-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.gallery img {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+.navigation-path a {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.navigation-path a:hover {
+  text-decoration: underline;
+}
+.bg-success {
+  --bs-bg-opacity: 0.2;
+  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+}
+.user-title {
+color: darkblue;
+font-size: 30px;
+}
+
+
+.btn-primary:hover {
+  background-color: #004a99; /* Azul oscuro más claro al pasar el cursor */
+}
+
+/* Color del nombre */
+.text-primary {
+  color: #002f6c !important; /* Azul oscuro */
+}
+
+/* Iconos sin recuadro */
+.btn-outline-secondary {
+  border: none; /* Sin recuadro */
+  background: none; /* Sin fondo */
+  padding: 0;
+}
