@@ -1,3 +1,11 @@
-/* 
-    General Styles used on every website (Don't Repeat Yourself)
-*/
+:root {
+    --color-white: #FFFFFF;
+    --color-black: #0C121C;
+    --color-red: #B80000;
+    --color-coquelicot: #FF4E2A;
+    --color-giants-orange: #FF6733;
+    --color-orange-crayola: #FF7E3C;
+    --color-atomic-tangerine: #FF914D;
+    --color-green: #00B85F;
+    --color-mauveine: #A328A3;
+}
