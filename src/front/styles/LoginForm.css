@@ -1,0 +1,41 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* PARTE IZQUIERDA */
+.custom1-container {
+    background-color: #5614f0;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 500px;
+}
+
+#text1 {
+    font-weight: 500;
+
+}
+
+/* PARTE DERECHA */
+
+.text-violet2 {
+    color: #5614f0;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+#btnSingup {
+    background-color: #5614f0;
+    color: white;
+    border: none;
+}
+
+#btnSingup:hover {
+    background-color: #200563;
+}
+
+#botonRedes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
