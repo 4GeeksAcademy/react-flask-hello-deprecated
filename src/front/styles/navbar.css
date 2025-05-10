@@ -1,0 +1,62 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: var(--color-black);
+    color: var(--color-white);
+    position: relative;
+}
+
+.navbar-brand {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Menú hamburguesa */
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: var(--color-white);
+    color: var(--color-black);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* Mostrar menú */
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Botones dentro del menú */
+.dropdown-item {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--color-black);
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+    background: var(--color-atomic-tangerine);
+}
