@@ -1,0 +1,37 @@
+.genretitle {
+    display: flex;
+    justify-content: start;
+    color: blueviolet;
+}
+
+.artists {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 10px;
+    scrollbar-width: thin;
+}
+
+.artistcard {
+    width: 25%;
+    background-color: rgba(205, 244, 213, 0.812);
+}
+
+.followbtn {
+    background-color: transparent;
+    color: purple;
+    border: 2px solid purple;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-outline-purple:hover {
+    background-color: purple;
+    color: white;
+}
+
