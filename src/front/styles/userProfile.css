@@ -1,0 +1,68 @@
+.profile-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones de navegación */
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.option-button {
+    text-decoration: none;
+    padding: 10px 15px;
+    background: var(--color-coquelicot);
+    color: var(--color-white);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.option-button:hover {
+    background: var(--color-giants-orange);
+}
+
+.option-button.active {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+/* Lista de canciones y artistas */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid var(--color-black);
+    background: var(--color-orange-crayola);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: var(--color-black);
+}
+
+button {
+    border: none;
+    background: var(--color-red);
+    color: var(--color-white);
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: var(--color-mauveine);
+}
