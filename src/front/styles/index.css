@@ -1,3 +1,1457 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+
+body{
+  background: black;
+}
+
+#layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: black;
+}
+
+/* Add scroll bar styling */
+::-webkit-scrollbar {
+  width: 10px; /* Scrollbar width */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #39ff14; /* Green for the scrollbar thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black;
+  background-color: black;
+  border-radius: 10px;
+}
+
+/* Navbar CSS */
+
+.listButton {
+  background-color: black;
+  border-color: #39ff14;
+  border-width: 1px;
+  color: #39ff14;
+}
+
+.listButton:hover {
+  box-shadow: 0px 0px 35px 5px #39ff14;
+  background-color: #39ff14;
+  color: black;
+}
+
+.searchButton {
+  background-color: black;
+  border-color: #39ff14;
+  border-width: 1px;
+  color: #39ff14;
+}
+
+.searchButton:hover {
+  box-shadow: 0px 0px 35px 5px #39ff14;
+  background-color: #39ff14;
+  color: black;
+}
+
+.logoutButton {
+  background-color: black;
+  border-color: #f40707;
+  border-width: 1px;
+  color: #f40707;
+}
+
+.logoutButton:hover {
+  box-shadow: 0px 0px 35px 5px #f40707;
+  background-color: #f40707;
+  color: black;
+}
+
+.loginButton {
+  background-color: #39ff14;
+  border-color: #39ff14;
+  border-width: 1px;
+  color: black;
+}
+
+.loginButton:hover {
+  box-shadow: 0px 0px 35px 5px black;
+  background-color: black;
+  color: #39ff14;
+}
+
+#button-for-login,
+#button-for-signup {
+  background-color: #39ff14;
+  border-color: #39ff14;
+  border-width: 1px;
+  color: black;
+}
+
+#button-for-login:hover,
+#button-for-signup:hover {
+  /*box-shadow: 0px 0px 35px 5px black;*/
+  background-color: black;
+  color: #39ff14;
+}
+
+.inactive {
+  background-color: black !important;
+  color: #39ff14 !important;
+}
+
+.navGear {
+  background-color: black;
+  border-color: #39ff14;
+  border-width: 1px;
+  color: #39ff14;
+  font-size: 35px;
+  border-radius: 50%;
+}
+
+.navGear .dropdown-toggle::after {
+  display: none;
+}
+
+.navGear:hover {
+  box-shadow: 0px 0px 35px 5px #39ff14;
+  background-color: black;
+  color: #39ff14;
+}
+
+/* Footer CSS */
+.footer {
+  border-top: 1px solid white;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.link,
+.link:link {
+  text-decoration: none;
+}
+.link:visited {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+.link:active {
+  text-decoration: none;
+}
+
+.about {
+  height: 670px;
+  width: 400px;
+  color: white;
+  background-color: black;
+  margin: auto;
+}
+
+/* .firstContactDiv {
+  height: 600px;
+} */
+
+/*.contact {
+  height: 85vh;
+  width: 36%;
+  color: black;
+  background-color: silver;
+  margin-left: 32%;
+  margin-right: 32%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+}
+.text {
+  width: 100%;
+  height: 50vh;
+  min-height: 20vh;
+} */
+
+.contact-main-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: silver;
+}
+
+.modal_dialog_div {
+  border-radius: 10px;
+  max-width: 40vw;
+  width: 40vw;
+  position: relative;
+}
+
+.modal_content_div_btn {
+  max-height: 80vh;
+  width: 80vw;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: silver;
+}
+
+.close_contact_us_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal_header_name {
+  font-size: 24px;
+  color: #39ff14;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.alert_main_div {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.alert_if_success_div {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert_if_not_success_div {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.lable_for_contact_us {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form_input_information {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form_text_message_information {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form_text_message_information {
+  resize: none;
+  height: 42vh;
+}
+
+#submitBtn {
+  width: 100%;
+  background-color: #39ff14;
+  border: none;
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#submitBtn:disabled {
+  background-color: #b0e57c;
+  cursor: not-allowed;
+}
+
+#submitBtn:hover:enabled {
+  background-color: #33e112;
+}
+
+.close_contact_us_btn {
+  font-size: 25px;
+}
+
+.mainModal {
+  border-radius: 5px;
+}
+
+/* Landing page CSS */
+
+#landingPage {
+  display: grid;
+  background-color: black;
+}
+
+.previewBox {
+  margin: 4vh auto;
+  display: flex;
+  height: 700px;
+  scale: 0.1;
+  opacity: 0;
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range-start: cover;
+  animation-range-end: 85vh;
+}
+
+.previewPhoto {
+  height: 600px;
+  width: 900px;
+  box-shadow: 0px 0px 55px 10px #39ff14;
+  border-radius: 5%;
+  margin-left: 50px;
+  margin-right: 50px;
+  /* scale: .1; opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 90vh */
+}
+
+@keyframes fade-in {
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.blurbContainer {
+  text-align: center;
+  margin: auto;
+}
+
+#switchToListing {
+  background-color: #39ff14;
+  border-color: black;
+  border-width: 3px;
+}
+
+#switchToListing:hover {
+  box-shadow: 0px 0px 35px 5px #39ff14;
+}
+
+.listingLogin {
+  background-color: #39ff14;
+  border-color: black;
+  border-width: 3px;
+}
+
+.listingLogin:hover {
+  box-shadow: 0px 0px 35px 5px #39ff14;
+}
+
+.blurb {
+  font-size: 30px;
+  width: 35vw;
+  margin-bottom: 2vh;
+  color: #39ff14;
+  /* scale: .1; opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range-start: cover;
+    animation-range-end: 50vh */
+}
+
+/* Listing page CSS */
+
+.listing-page {
+  padding: 0px;
+  font-family: Arial, sans-serif;
+  background: #90978f;
+}
+
+.listCoin {
+  background-color: #90978f;
+}
+
+/* .listRowHeaders {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #39ff14;
+  font-size: 30px;
+} */
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.listTradeBtn {
+  background-color: black;
+  border-color: #39ff14;
+  border-width: 1px;
+  color: #39ff14;
+}
+
+.listTradeBtn:hover {
+  box-shadow: 0px 0px 10px 3px #39ff14;
+  background-color: #39ff14;
+  color: black;
+}
+
+.coin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.coin-table thead th {
+  background-color: #90978f;
+  padding: 10px 15px;
+  text-align: left;
+  font-size: larger;
+  border-bottom: 2px solid #39ff14;
+  /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #39ff14; */
+}
+
+.coin-table tbody td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #39ff14;
+}
+
+.coin-table tbody tr:hover {
+  transform: translateY(-5px);
+  transition: transform;
+  background-color: #90978f;
+}
+
+.coin-table th:nth-child(7) {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.coin-table td:nth-child(7) button {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.coin-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.coin-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.coin-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.coin-symbol {
+  color: #666;
+  font-size: 12px;
+}
+
+.trade-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.trade-button:hover {
+  background-color: #0056b3;
+}
+
+.coin-favorite {
+  display: flex;
+  padding: 8px 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+/* user dashboard CSS */
+
+#dashboardWhole {
+  display: flex;
+}
+#togglePages {
+  /* display:block; */
+  background-color: black;
+  color: #39ff14;
+  width: 11vw !important;
+  min-width: 11vw;
+  max-width: 11vw;
+  height: 100%;
+}
+.nav-link {
+  color: #39ff14;
+}
+.nav-pills .nav-link.active {
+  background-color: #39ff14;
+  color: black;
+  text-decoration: black;
+}
+#dashboardContent {
+  width: 90vw;
+  height: 100%;
+  background-color: black;
+}
+
+/* Favorites CSS */
+
+.favorites-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust based on your parent container */
+  min-height: 400px; /* Ensures adequate height */
+}
+
+.no-favorites-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: #666;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+}
+
+.no-favorites-message h4 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.no-favorites-message p {
+  font-size: 16px;
+  color: #555;
+}
+
+.remove-btn {
+  margin-top: 0px;
+  margin-left: 20px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #ff1a1a;
+}
+
+/* .fav{
+  height: 85vh;
+} */
+
+#favoriteScreen {
+  background-color: black;
+  justify-content: center;
+  margin-left: 0;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.favCardOut {
+  padding: 5vw;
+  background-color: black;
+}
+
+.favCardIn {
+  border: 2px solid #39ff14;
+  background-color: #90978f;
+  border-radius: 2%;
+  width: 20vw;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 3px 1px #39ff14;
+}
+
+.favCardIn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 10px 7px #39ff14;
+}
+
+.favCardTop {
+  padding-top: 2vh;
+  height: 25vh;
+  border-bottom: 2px solid black;
+}
+
+.favCardBody {
+  background-color: #90978f;
+}
+
+.favMoreInfoButton {
+  background-color: #39ff14;
+  border-color: black;
+  border-width: 1px;
+}
+
+.favMoreInfoButton:hover {
+  box-shadow: 0px 0px 35px 5px #39ff14;
+}
+
+.row {
+  margin-right: 0;
+}
+
+/* more info screen */
+
+.moreInfo {
+  background-color: black;
+  display: flex;
+}
+
+#moreInfTrdBtnBox {
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  height: 23vh;
+}
+
+#moreInfTrdBtn {
+  height: 7vh;
+  width: 13vw;
+  margin:auto;
+  background-color: #39ff14;
+  border-color: black;
+  border-width: 1px;
+  color: black;
+  font-size: x-large;
+}
+
+#moreInfTrdBtn:hover {
+  box-shadow: 0px 0px 8px 5px #39ff14;
+  background-color: black;
+  color: #39ff14;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  width: 92vw;
+}
+
+.topHalf {
+  display: flex;
+}
+
+#morInfMktDta {
+  height: 75vh;
+}
+
+#marketData {
+  color: white;
+  /* box-shadow: 25px 25px 30px 0px #1a8008; */
+  border: 1px solid #39ff14;
+  width: 30vw;
+  height: 52vh;
+  padding-left: 5vw;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+.timeFrame {
+  display: flex;
+  /* background-color: #0056b3; */
+  border: 1px solid #39ff14;
+}
+
+.currency {
+  display: flex;
+  justify-content: end;
+  border: 1px solid #39ff14;
+}
+
+.backToList {
+  display: block;
+  background-color: black;
+  color: #39ff14;
+  width: 8vw;
+}
+
+.graphBox {
+  height: 75vh;
+  width: 50vw;
+  background-color: white;
+  margin-left: 80px;
+  margin-right: 60px;
+}
+
+.graphButtonsBox {
+  height: 40px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  border: 1px solid #39ff14;
+  border-bottom: none;
+}
+
+.graphButtons {
+  background-color: #39ff14;
+  border: 1px solid black;
+  border-top: none;
+  border-bottom: none;
+}
+
+/* .graphButtons .btn:checked {
+  background-color: #007bff;
+  box-shadow: none;
+} */
+
+.graphButtons2 {
+  background-color: #39ff14;
+  border: 1px solid black;
+  border-top: none;
+  border-bottom: none;
+}
+
+/* .graphButtons2:focus {
+  background-color: #007bff;
+} */
+
+.bigGraph {
+  height: 70vh;
+  background-color: black;
+  border: 1px solid #39ff14;
+  border-top: none;
+}
+
+.news {
+  margin: 25px;
+  color: #39ff14;
+  background-color: white;
+  height: 50vh;
+  width: 80vw;
+  margin-left: 80px;
+  margin-right: 60px;
+}
+
+.coinName {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Wallet CSS */
+
+.wallet-table tbody tr {
+  border-bottom: 5px solid #ddd; /* Adds a line between rows */
+  height: 180px;
+  text-align: center;
+}
+
+.wallet-image {
+  border-radius: 50%;
+}
+
+.walletCurrency {
+  display: flex;
+}
+
+#wc1 {
+  background-color: #39ff14;
+  color: black;
+}
+.walletCurrencyBtns {
+  background-color: black;
+  border: 1px solid #39ff14;
+  border-top: none;
+  border-bottom: none;
+  color: #39ff14;
+}
+
+.wallet-table thead th {
+  background-color: #f4f4f4;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Overall Performance CSS */
+
+#overallHoldings {
+  background-color: black;
+}
+
+.holdingsGraph {
+  width: 70vw;
+  height: 80vh;
+  background-color: black;
+  margin: auto;
+  border: 1px solid #39ff14;
+}
+
+.holdingsTitle {
+  color: #39ff14;
+  text-align: center;
+}
+
+.holdingspct {
+  color: #39ff14;
+  text-align: center;
+}
+
+.factBox {
+  text-align: center;
+  margin: auto;
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  color: #39ff14;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+/* Login/singup modal */
+
+#logModal {
+  background-color: #90978f;
+}
+
+/* Contact us modal */
+
+/* about us page CSS */
+
+/* Main container for the news feed */
+.news {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #1c1c1c; /* Dark background */
+  border: 1px solid #39ff14; /* Green border */
+  border-radius: 10px; /* Rounded corners */
+  color: white;
+  max-height: 400px; /* Maximum height to make it scrollable */
+  overflow-y: auto; /* Enable vertical scrolling */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+/* Individual news articles */
+.news ul {
+  padding: 0;
+  margin: 0;
+}
+
+.news li {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #39ff14; /* Divider between articles */
+  list-style-type: none; /* Remove bullet points */
+}
+
+.news li:last-child {
+  border-bottom: none; /* Remove the border for the last article */
+}
+
+/*whitepapre */
+.description {
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  background-color: #222; /* Dark background */
+  border-radius: 5px; /* Rounded corners */
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  width: 100%; /* Full width */
+  max-width: 80vw; /* Remove any limit on width */
+  margin-left: auto;
+  margin-right: auto; /* Center the description box */
+}
+
+.description h2 {
+  color: #39ff14; /* Green title color */
+  margin-bottom: 10px;
+}
+
+.description p {
+  margin: 10px 0;
+  line-height: 1.6;
+  word-wrap: break-word; /* Ensure text doesn't overflow */
+}
+
+/* Article title styling */
+.news h2 {
+  font-size: 18px;
+  color: #39ff14; /* Green for the title */
+  margin: 0;
+}
+
+.news a:hover h2 {
+  text-decoration: underline; /* Add underline effect on hover */
+}
+
+/* Article description and details */
+.news p {
+  font-size: 14px;
+  color: #b3b3b3; /* Light gray for descriptions */
+  margin: 5px 0 0 0;
+}
+
+/* Add scroll bar styling */
+.news::-webkit-scrollbar {
+  width: 10px; /* Scrollbar width */
+}
+
+.news::-webkit-scrollbar-thumb {
+  background: #39ff14; /* Green for the scrollbar thumb */
+  border-radius: 10px;
+}
+
+.news::-webkit-scrollbar-thumb:hover {
+  background: #2dc10d; /* Slightly darker green on hover */
+}
+
+.news::-webkit-scrollbar-track {
+  background: #2c2c2c; /* Dark gray for the track */
+}
+
+/* tradeModal:*/
+
+.trade-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.trdModal {
+  background: #90978f;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #39ff14;
+}
+
+.trdBtn {
+  background-color: black;
+  border-color: #39ff14;
+  border-width: 1px;
+  color: #39ff14;
+}
+
+
+
+.bookmark-button {
+  background: transparent;
+  border: 2px solid black; /* Black border by default */
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 30px;
+  height: 40px;
+  position: relative;
+}
+
+.bookmark-button:hover {
+  background-color: #39ff14; /* Bright green background on hover */
+  border-color: #39ff14; /* Bright green border on hover */
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.5); /* Glowing bright green effect */
+}
+
+.bookmark-button.favorited {
+  background-color: #39ff14; /* Bright green background for favorited state */
+  border-color: #39ff14; 
+  color: black; 
+}
+
+.bookmark-button i {
+  font-size: 18px;
+  transition: color 0.3s ease;
+  color: black; /* Default black icon */
+}
+
+.bookmark-button.favorited i {
+  color: black /* White icon for favorited state */
+}
+
+.bookmark-button:hover i {
+  color: #fff; /* White icon on hover */
+}
+
+
+
+
+.trdBtn:hover {
+  box-shadow: 0px 0px 5px 2px #39ff14;
+  background-color: #39ff14;
+  color: black;
+}
+
+.trdBtnSlctd {
+  box-shadow: none;
+  background-color: #39ff14;
+  color: black;
+}
+
+.trade-close-button {
+  position: absolute; /* Position it at the top-right corner */
+  top: 10px;
+  right: 10px;
+  width: 20px; /* Set the width */
+  height: 20px; /* Set the height (same as width for a circle) */
+  border-radius: 50%; /* This makes the button circular */
+  background-color: red; /* Background color for the button */
+  color: white; /* Text color */
+  border: none; /* Remove the border */
+  display: flex; /* Flexbox for centering content */
+  justify-content: center; /* Center the text horizontally */
+  align-items: center; /* Center the text vertically */
+  font-size: 20px; /* Font size for the "X" */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.trade-close-button:hover {
+  background-color: darkred; /* Change background color on hover */
+}
+
+trade-button.btn-success {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* SEARCH */
+
+/* Container styling for the search results page */
+.search-results-container {
+  background-color: black;
+  color: #39ff14;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Title styling */
+.search-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #39ff14;
+  text-shadow: 0 0 10px #39ff14;
+}
+
+/* Grid styling for the search results */
+.search-results-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Card styling */
+.search-card {
+  background-color: #1c1c1c;
+  border: 2px solid #39ff14;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #39ff14;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px;
+  padding: 1rem;
+}
+
+.search-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #39ff14;
+  cursor: pointer;
+}
+
+/* Card body styling */
+.search-card-body {
+  color: white;
+}
+
+.search-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px #39ff14;
+}
+
+.search-card-text {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Styling for when no results are found */
+.no-results {
+  color: #ff4141;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  text-shadow: 0 0 5px #ff4141;
+}
+
+/* WALLET */
+
+#fundsModal {
+  background: #90978f;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  border: 2px solid #39ff14;
+}
+
+/* Wallet Page Container */
+.wallet-page {
+  background-color: black; /* Matches dark theme */
+  color: #39ff14; /* Green text */
+  padding: 20px;
+  min-height: 100vh; /* Ensure it spans the full height */
+}
+
+/* Wallet Table Styling */
+.wallet-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: white; /* Ensure text is readable */
+}
+
+.wallet-table thead th {
+  background-color: #1c1c1c; /* Dark header background */
+  color: #39ff14; /* Green header text */
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #39ff14; /* Green border */
+}
+
+.wallet-table tbody td {
+  padding: 10px 15px;
+  text-align: center;
+  border-bottom: 1px solid #39ff14; /* Green divider */
+}
+
+/* Wallet Info Section */
+.wallet-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.wallet-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.wallet-symbol {
+  font-size: 12px;
+  color: #90978f; /* Light gray for subtle text */
+}
+
+.wallet-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #39ff14; /* Green border */
+  box-shadow: 0 0 10px #39ff14; /* Glow effect */
+}
+
+/* Sparkline Chart Cell */
+td canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Table Rows Hover Effect */
+.wallet-table tbody tr:hover {
+  background-color: #1c1c1c; /* Slightly darker row highlight */
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .wallet-table {
+    font-size: 12px;
+  }
+
+  .wallet-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+/* Heading */
+.wallet-page h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #39ff14;
+  margin-bottom: 20px;
+}
+
+/* ALERTS */
+/* Alert Configuration Section */
+.alert-configuration {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+}
+
+.alert-configuration h4 {
+  color: #39ff14;
+  margin-bottom: 10px;
+}
+
+.alert-configuration input[type="number"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #39ff14;
+  margin-right: 10px;
+  width: 200px;
+  background-color: #000; /* Dark background for the input */
+  color: #39ff14; /* Green text */
+}
+
+.alert-configuration label {
+  color: #39ff14;
+  margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.alert-configuration label input[type="radio"] {
+  margin-right: 5px;
+}
+
+.alert-configuration button {
+  padding: 8px 15px;
+  background-color: #39ff14;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Alerts List Section */
+.alerts-list {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+}
+
+.alerts-list h4 {
+  color: #39ff14;
+  margin-bottom: 10px;
+}
+
+.alerts-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.alerts-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #39ff14;
+  border-radius: 5px;
+  background-color: #000;
+  color: #39ff14;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alerts-list li button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.alerts-list p {
+  color: #39ff14;
+}
+
+.alert-configuration,
+.alerts-list {
+  width: 50vw;
+  margin-left: 80px;
+  margin-right: 60px;
+}
+
+.alert-configuration {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border: 1px solid #39ff14;
+  border-radius: 10px;
+  color: #39ff14;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.alerts-list {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border: 1px solid #39ff14;
+  border-radius: 10px;
+  color: #39ff14;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ABOUT US */
+
+/* Alerts List Section */
+.alerts-list {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  border: 1px solid #39ff14;
+  width: 50vw;
+  margin-left: 80px;
+  margin-right: 60px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+}
+
+.alerts-list h4 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #39ff14;
+}
+
+.alerts-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.alerts-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #39ff14;
+  border-radius: 5px;
+  background-color: #000;
+  color: #39ff14;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alerts-list li button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.alerts-list p {
+  color: #39ff14;
+}
+
+
+
+
+
+
+
+
+
+/* ABOUT US */ 
+
+.about {
+  max-width: 800px; /* Limit width for better readability */
+  margin: 40px auto; /* Center horizontally and give vertical spacing */
+  padding: 20px; /* Add padding around the content */
+  background-color: #1a1a1a; /* Dark background */
+  border: 1px solid #39ff14; /* Green border to match your theme */
+  border-radius: 15px; /* Rounded corners */
+  color: #ffffff; /* White text for readability on dark bg */
+  font-family: "Arial", sans-serif;
+  line-height: 1.55; /* Improve readability */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add subtle depth with a shadow */
+}
+
+.about > div:first-child {
+  font-size: 28px; /* Larger font for the heading */
+  font-weight: bold;
+  margin-bottom: 20px; /* Space below heading */
+  color: #39ff14; /* Highlight the title in green */
+}
+
+.about > div:not(:first-child) {
+  font-size: 16px; /* Standard body text size */
+  margin-bottom: 20px; /* Spacing between paragraphs */
+  color: #b3b3b3; /* Slightly lighter text color for body */
+}
+
+/* Optional: Add hover effect or transition if desired */
+.about:hover {
+  border-color: #2dc10d; /* Slightly darker green on hover */
+}

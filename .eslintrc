@@ -24,7 +24,7 @@
         "objects": "never",
         "imports": "never",
         "exports": "never",
-        "functions": "ignore",
+        "functions": "ignore"
     }],
     "react/prop-types": [2]
   }
