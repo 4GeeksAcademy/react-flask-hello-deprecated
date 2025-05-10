@@ -1,7 +1,5 @@
-"""
-This module takes care of starting the API Server, Loading the DB and Adding the endpoints
-"""
 import os
+from flask_cors import CORS
 from flask import Flask, request, jsonify, url_for, send_from_directory
 from flask_migrate import Migrate
 from flask_swagger import swagger
@@ -10,6 +8,13 @@ from api.models import db
 from api.routes import api
 from api.admin import setup_admin
 from api.commands import setup_commands
+from flask_jwt_extended import JWTManager
+from datetime import timedelta
+from dotenv import load_dotenv
+
+
+# Cargar variables de entorno
+load_dotenv()
 
 # from models import Person
 
@@ -37,8 +42,19 @@ setup_admin(app)
 # add the admin
 setup_commands(app)
 
+
+
+#  Configuración de JWT
+jwt_key = os.getenv("JWT_KEY")
+
+app.config["SECRET_KEY"] = jwt_key  # Clave para la aplicación Flask
+app.config["JWT_SECRET_KEY"] = jwt_key  # Clave necesaria para JWT
+app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(minutes=5)
+jwt_manager = JWTManager(app)
+
 # Add all endpoints form the API with a "api" prefix
 app.register_blueprint(api, url_prefix='/api')
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # Handle/serialize errors like a JSON object
 
