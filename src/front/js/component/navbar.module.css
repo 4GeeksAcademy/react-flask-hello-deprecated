@@ -1,0 +1,27 @@
+.navbar__container{
+    background-color: #1E266D;
+}
+
+.navbar__brand{
+    color: #f5f5f5;
+}
+
+.navbar__btn__register{
+    background-color: #FF6B6B;
+    color: #f5f5f5;
+}
+
+.navbar__btn__register:hover{
+    background-color: #f5f5f5;
+    color: #FF6B6B;
+}
+
+.navbar__btn__login{
+    background-color: #00D1B2;
+    color: #f5f5f5;
+}
+
+.navbar__btn__login:hover{
+    background-color: #f5f5f5;
+    color: #00D1B2;
+}

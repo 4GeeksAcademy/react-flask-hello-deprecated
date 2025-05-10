@@ -1,0 +1,24 @@
+.searchbar_container{
+    box-sizing: content-box;
+
+    width: 500px;
+    border-radius: 50px;
+    border: 2px solid black;
+}
+.searchbar_input{
+
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    padding-left: 30px;
+    border: none;
+}
+.searchbar_input:focus{
+    outline: none;
+}
+
+.searchbar_icon{
+    border-radius: 50px;
+ 
+     
+}

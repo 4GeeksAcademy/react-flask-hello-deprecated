@@ -1,0 +1,22 @@
+.sidebar {
+    background-color: aliceblue;
+    width: 200px;
+    max-width: 300px;
+    color: #1e266d;
+    padding-left: 10px;
+
+}
+.sidebarDivider {
+    width: 100% !important;
+    height: 1px !important;
+    background-color: #1e266d !important;
+    border: none !important;
+    opacity: 1 !important;
+}
+.sidebarHeading{
+    font-size: 1em;
+    font-weight: 500;
+    color: #1e266d;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}

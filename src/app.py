@@ -11,6 +11,10 @@ from api.routes import api
 from api.admin import setup_admin
 from api.commands import setup_commands
 
+from flask_jwt_extended import  JWTManager
+from flask_bcrypt import Bcrypt
+
+
 # from models import Person
 
 ENV = "development" if os.getenv("FLASK_DEBUG") == "1" else "production"
@@ -48,6 +52,11 @@ def handle_invalid_usage(error):
     return jsonify(error.to_dict()), error.status_code
 
 # generate sitemap with all your endpoints
+
+jwt = JWTManager(app) 
+bcrypt = Bcrypt(app)  
+app.config["JWT_SECRET_KEY"]=os.getenv('FLASK_APP_KEY')
+
 
 
 @app.route('/')
