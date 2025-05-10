@@ -4,12 +4,23 @@ import ScrollToTop from "./component/scrollToTop";
 import { BackendURL } from "./component/backendURL";
 
 import { Home } from "./pages/home";
+import Login from "./pages/login"; 
+import Register from "./pages/register"; 
+import Profile from "./pages/profile";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
+import { ProductAdmin } from "./pages/productAdmin";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import ProtectedRoute from "./component/ProtectedRoute"; // Importamos el componente de protección
+import { Store } from "./pages/store"; // Importar la vista de Tienda
+import { Cart } from "./pages/cart"; // Importar la vista de Carrito
+import { OrderHistory } from "./pages/orderHistory"; // Importar la vista de Historial de Pedidos
+import { Notifications } from "./pages/notifications"; // Importar la vista de Notificaciones
+import NotFound from "./pages/notFound";
+import CreateProduct from "./pages/CreateProduct"; // Importa el componente
 
 //create your first component
 const Layout = () => {
@@ -22,10 +33,20 @@ const Layout = () => {
     return (
         <div>
             <BrowserRouter basename={basename}>
-                <ScrollToTop>
+                <ScrollToTop> 
                     <Navbar />
                     <Routes>
                         <Route element={<Home />} path="/" />
+                        <Route element={<Login />} path="/login" />
+                        <Route element={<Register />} path="/register" />
+                        <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+                        <Route path="/store" element={<Store />} /> 
+                        <Route path="/cart" element={<Cart />} /> 
+                        <Route path="/order-history" element={<ProtectedRoute><OrderHistory /></ProtectedRoute>} /> 
+                        <Route path="/notifications" element={<ProtectedRoute><Notifications /></ProtectedRoute>} /> 
+                        <Route path="/admin/products" element={<ProductAdmin />} />
+                        <Route path="/admin/create-product" element={<ProtectedRoute><CreateProduct /></ProtectedRoute>} />
+                        <Route element={<NotFound />} path="*"  />
                         <Route element={<Demo />} path="/demo" />
                         <Route element={<Single />} path="/single/:theid" />
                         <Route element={<h1>Not found!</h1>} />

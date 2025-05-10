@@ -1,0 +1,36 @@
+.not-found-container {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.not-found-title {
+    font-size: 6rem;
+    color: #FF1517;
+    font-weight: bold;
+}
+
+.not-found-message {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    color: #555;
+}
+
+.not-found-btn {
+    background-color: #FF1517;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.not-found-btn:hover {
+    background-color: #FEDC58;
+    color: #FF1517;
+    transform: scale(1.05);
+}

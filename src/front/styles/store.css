@@ -1,0 +1,30 @@
+.store-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.store-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.product-list {
+    margin-top: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.loading-text,
+.error-text,
+.no-products-text {
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+}
