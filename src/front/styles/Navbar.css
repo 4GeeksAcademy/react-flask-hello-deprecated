@@ -1,0 +1,241 @@
+/* General reset */
+
+/* Sidebar Container */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #ffffff;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  z-index: 10;
+}
+
+/* Sidebar Menu */
+.sidebar .sidebar-menu {
+  flex-grow: 1;
+  padding: 0;
+}
+
+.sidebar .sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .sidebar-menu ul li {
+  margin: 0;
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease, border-left 0.3s ease;
+  color: #555555;
+  font-size: 0.95em;
+  border-left: 3px solid transparent;
+}
+
+.sidebar .sidebar-menu ul li:hover {
+  background: #f5f5f5;
+  border-left: 3px solid #333333;
+}
+
+.sidebar .sidebar-menu ul li.active {
+  border-left: 3px solid #333333;
+  background: #e9ecef;
+}
+
+.sidebar .sidebar-menu ul li svg {
+  font-size: 1.2em;
+  color: #999999;
+}
+
+.sidebar .sidebar-menu ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Section Spacing */
+.sidebar .sidebar-menu ul li.section {
+  padding: 10px 20px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #999999;
+  cursor: default;
+  background-color: #f3f4f6;
+}
+
+/* Divider Line */
+.sidebar .sidebar-menu ul li.divider {
+  height: 1px;
+  background: #e0e0e0;
+  margin: 15px 20px;
+}
+
+/* Sidebar Footer */
+.sidebar .sidebar-footer {
+  padding: 20px;
+  background: #f8f8f8;
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 1px solid #eeeeee;
+  color: #999999;
+  position: sticky;
+}
+
+/* Bottom Section for Help and Logout */
+.sidebar .sidebar-bottom {
+  margin-top: auto;
+  padding: 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.sidebar .sidebar-bottom ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .sidebar-bottom ul li {
+  margin: 0;
+  padding: 15px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease, border-left 0.3s ease;
+  color: #555555;
+  font-size: 0.95em;
+  border-left: 3px solid transparent;
+}
+
+.sidebar .sidebar-bottom ul li:hover {
+  background: #f5f5f5;
+  border-left: 3px solid #333333;
+}
+
+.sidebar .sidebar-bottom ul li svg {
+  font-size: 1.2em;
+  color: #999999;
+}
+
+.sidebar .sidebar-bottom ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Collapsible Sidebar */
+.sidebar {
+  width: 250px;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar .toggle-button {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  background: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: -10px;
+}
+
+.sidebar .sidebar-menu ul li {
+  overflow: hidden;
+  white-space: nowrap;
+  transition: padding 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-menu ul li {
+  padding-left: 15px;
+}
+
+.sidebar.collapsed .sidebar-menu ul li a {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-menu ul li svg {
+  margin: 0 auto;
+}
+
+.sidebar .sidebar-footer {
+  text-align: center;
+}
+
+.sidebar.collapsed .sidebar-footer {
+  font-size: 0.8em;
+  opacity: 0;
+}
+
+/* bottom sidebar */
+.sidebar .sidebar-bottom ul li {
+  overflow: hidden;
+  white-space: nowrap;
+  transition: padding 0.3s ease;
+}
+
+.sidebar.collapsed .sidebar-bottom ul li {
+  padding-left: 15px;
+}
+
+.sidebar.collapsed .sidebar-bottom ul li a {
+  display: none;
+}
+
+.sidebar.collapsed .sidebar-bottom ul li svg {
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar .toggle-button {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 48px;
+    height: 48px;
+    background: #333333;
+    color: #ffffff;
+    margin-top: 0px;
+  }
+
+  .sidebar {
+    width: 420px;
+  }
+
+  .sidebar.collapsed {
+    width: 0px;
+  }
+
+  .sidebar.collapsed *:not(.toggle-button) {
+    opacity: 0;
+  }
+}
+
+.logout:hover {
+  background-color: #9e1c24 !important;
+}
+
+.logout:hover a {
+  color: white !important;
+}

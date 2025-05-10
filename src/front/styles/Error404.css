@@ -1,0 +1,31 @@
+.error-container{
+  
+  text-align: center;
+  margin-top: 150px; 
+  width: 100vw;
+}
+
+
+
+
+.error-title{
+  font-size: 5rem;
+  color: #ff4040;
+}
+
+.error-message{
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.error-link{
+  
+  color: #6f54e8;
+  text-decoration: underline;
+}
+
+ @media (max-width: 1250px){
+  .error-image{
+    width: 300px;
+  }
+} 

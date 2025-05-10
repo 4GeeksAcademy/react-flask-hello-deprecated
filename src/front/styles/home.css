@@ -1,7 +1,224 @@
-/*
-    home.css: This website contains selectors only used in home.css
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f6f9;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+/* Header */
+.header h1 {
+  font-size: 2rem;
+  color: #334155;
+}
+
+/* Layout for sections */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+/* Section container for transactions and overview */
+.section-row {
+  display: flex;
+  gap: 20px;
+}
+
+/* Transactions List Section */
+.transactions-list {
+  flex: 2;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.transactions-list h3 {
+  margin-bottom: 20px;
+  color: #334155;
+}
+
+.transactions-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.3s ease;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-item:hover {
+  background-color: #f9fafb;
+}
+
+.transaction-logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.transaction-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-info strong {
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+.transaction-info .description {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 5px;
+}
+
+.transaction-info .description .date {
+  color: #94a3b8;
+}
+
+.transaction-amount .amount {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Balance Section */
+.balance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del balance */
+.balance h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #334155;
+}
+
+/* Balance numérico */
+.balance h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+/* Fecha actual */
+.balance .current-date {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+.expense {
+  color: #e74c3c;
+}
+
+.income {
+  color: #27ae60;
+}
+
+/* Estilo del header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: var(--header-bg, #f5f5f5);
+  color: var(--header-text, #333);
+}
+
+/* Icono del usuario */
+.user-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.user-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s;
+}
+
+.user-icon img:hover {
+  border-color: #4caf50;
+}
+
+/* Contenedor del lado derecho del header */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Estilos generales del contenedor de la gráfica */
+.chart-row {
+  display: flex;
+  
+  align-items: center;
+  /* padding: 20px; */
+}
+
+.chart {
+  flex: 1;
+  max-width: 800px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.chart h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #334155;
+}
+
+.chart-container {
+  width: 100%;
+  height: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Opcional: Ajustes de responsive design */
+@media (max-width: 768px) {
+  .chart {
+    max-width: 100%;
+  }
+
+  .chart-container {
+    height: 300px;
+  }
+}

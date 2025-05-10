@@ -1,0 +1,10 @@
+:root {
+    --primary-color: #5614f0; /* Color principal */
+    --secondary-color: #5614f0; /* Color secundario */
+    --input-background-color: #f2f0f7; /* Fondo de los inputs */
+    --button-color: #5614f0; /* Color base del botón */
+    --button-hover-color: #200563; /* Color del botón en hover */
+    --text-color: #000000; /* Color del texto */
+    --icon-color: #5614f0; /* Color de los iconos */
+    --label-color: #5614f0; /* Nuevo color para los títulos de los inputs */
+}

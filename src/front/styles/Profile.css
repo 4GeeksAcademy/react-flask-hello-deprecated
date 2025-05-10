@@ -1,0 +1,236 @@
+.profile-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f5f9;
+  }
+  
+  .profile-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    overflow: hidden;
+  }
+  
+  .profile-header {
+    background: linear-gradient(to bottom, #baa0f7, #8b5cf6);
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Align the text towards the bottom */
+    padding-bottom: 16px;
+  }
+  
+  .profile-avatar-container {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    background: #bfdbfe;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for clarity */
+    margin: 40px 0;
+  }
+  
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  
+  .profile-edit-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(25%, 25%); /* Centers the button at the edge */
+    background: white;
+    padding: 6px;
+    border-radius: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 40px;
+    width: 40px;
+  }
+  
+  .edit-icon {
+    width: 16px;
+    height: 16px;
+    color: #6b7280;
+  }
+  
+  .profile-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .profile-info {
+    font-size: 0.875rem;
+    color: white;
+  }
+  
+  .profile-options,
+  .profile-footer {
+    padding: 24px 16px;
+  }
+  
+  .option-item,
+  .footer-item {
+    background: #f3f4f6;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .option-item:hover,
+  .footer-item:hover {
+    background: #e5e7eb;
+  }
+  
+  .option-status {
+    font-weight: 600;
+    color: #ef4444;
+  }
+  
+  /* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+  }
+  
+  .modal-close-btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .modal-close-btn:hover {
+    background-color: #2563eb;
+  }
+  .option-status-on {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .option-status {
+    color: black;
+    font-weight: normal;
+  }
+  
+  /* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #6366f1; /* Matches the purple color */
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+  }
+  
+  /* Form Labels */
+  .modal-content label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: white;
+  }
+  
+  /* Form Inputs */
+  .modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #111827;
+    background-color: #f3f4f6;
+  }
+  
+  /* Form Input Focus */
+  .modal-content input:focus {
+    outline: none;
+    border: 2px solid #3b82f6;
+  }
+  
+  /* Modal Buttons */
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .modal-buttons button:first-of-type {
+    background-color: #d1d5db; /* Gray Close Button */
+    color: #111827;
+  }
+  
+  .modal-buttons button:first-of-type:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .modal-buttons button:last-of-type {
+    background-color: #3b82f6; /* Save Button */
+    color: white;
+  }
+  
+  .modal-buttons button:last-of-type:hover {
+    background-color: #2563eb;
+  }
+  
