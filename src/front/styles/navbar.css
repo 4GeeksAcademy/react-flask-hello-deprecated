@@ -1,0 +1,77 @@
+.navbar {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Ejemplo de degradado desde rojo hasta atomic-tangerine */
+    background: linear-gradient(
+        90deg, 
+        var(--color-red) 0%, 
+        var(--color-giants-orange) 50%, 
+        var(--color-atomic-tangerine) 100%
+    );
+    color: var(--color-white);
+    padding: 10px 20px;
+    border-radius: 30px; /* Para darle bordes redondeados */
+    position: relative;
+}
+
+.user-menu {
+    position: relative; /* Esto hace que cualquier elemento con posición absoluta se posicione relativo a este contenedor */
+}
+
+.navbar-brand {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+.user-icon img {
+    width: 40px;            
+    height: 40px;
+    border-radius: 50%;    
+    object-fit: cover;      
+    cursor: pointer;
+}
+
+
+/* Menú desplegable */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 1;  
+    background: var(--color-white);
+    color: var(--color-black);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+/* Mostrar menú */
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Botones dentro del menú */
+.dropdown-item {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--color-black);
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+    background: var(--color-atomic-tangerine);
+}

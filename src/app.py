@@ -10,6 +10,7 @@ from api.models import db
 from api.routes import api
 from api.admin import setup_admin
 from api.commands import setup_commands
+from api.auth import jwt
 
 # from models import Person
 
@@ -42,6 +43,8 @@ app.register_blueprint(api, url_prefix='/api')
 
 # Handle/serialize errors like a JSON object
 
+#inicializo el jwt con mi app
+jwt.init_app(app)
 
 @app.errorhandler(APIException)
 def handle_invalid_usage(error):
