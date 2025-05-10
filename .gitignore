@@ -80,3 +80,5 @@ database.database
 database.db
 diagram.png
 __pycache__/
+firebase_key.json
+

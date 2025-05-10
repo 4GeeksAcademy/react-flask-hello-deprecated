@@ -1,0 +1,129 @@
+.ContainerForm {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 2rem;
+    padding: 35px;
+    background-image: linear-gradient(to right, rgba(31, 118, 146, 0.5), rgba(67, 56, 135, 0.5));
+    color: #060606;
+    font-weight: 500;
+    align-self: center;
+    width: 75%;
+    margin: 20px auto;
+    color: white;
+}
+
+.ContainerF {
+    background: linear-gradient(45deg,
+            rgba(0, 0, 0, 0.8),
+            rgba(10, 61, 98, 0.8),
+            rgba(72, 126, 176, 0.8),
+            rgba(130, 205, 234, 0.8));
+    min-height: 94vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 40px;
+    padding-top: 100px;
+    color: white;
+    animation: linearGradient 5s ease infinite;
+    background-size: 200% 200%;
+}
+
+@keyframes linearGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.buttonRegForm {
+    position: relative;
+    padding: 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #FFFFFF;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    margin-top: 2%;
+}
+
+.buttonRegForm:hover {
+    background: rgb(61, 106, 255);
+    color: white;
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.buttonRegForm:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+
+.buttonRegForm::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+
+.buttonRegForm:focus {
+    outline-style: solid;
+    outline-color: #2b2d42;
+    outline-width: 2px;
+    outline-offset: 2px;
+}
+
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+.buttonRegForm:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+
+textarea {
+    field-sizing: content;
+}

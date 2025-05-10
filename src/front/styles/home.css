@@ -1,7 +1,195 @@
-/*
-    home.css: This website contains selectors only used in home.css
+.footer {
+  background-color: #2b2d42;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  bottom: 0;
+}
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+.footer a {
+  color: cyan;
+  text-decoration: none;
+}
+
+.Parrafos {
+  font-size: 20px;
+  text-align: left;
+}
+
+.section h2 {
+  color: #f2f4f5;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.section p {
+  margin-bottom: 15px;
+}
+
+.allSection {
+  background: linear-gradient(45deg, #0a3d62, #3c6382);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 40px;
+  color: white;
+  margin-top: 3%;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  opacity: 0;
+  transition: opacity 2s ease, transform 2s ease;
+  transform: translateY(20px);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-content {
+  flex: 1;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.section-image {
+  max-width: 85%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.section.alternate .text-content {
+  order: 1;
+}
+
+.section.alternate .image-content {
+  order: 2;
+}
+
+#registro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 20px;
+  text-align: center;
+}
+
+#btn-reg {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+#btn-reg:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+#btn-reg:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+#btn-reg::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+#btn-reg:focus {
+  outline-style: solid;
+  outline-color: #2b2d42;
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+#btn-reg:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 10px;
+  }
+
+  .image-content {
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .register-button {
+    width: auto;
+  }
+
+  .section-image {
+    min-width: 40%;
+    height: auto;
+  }
+
+  .allSection {
+    margin-top: 6%;
+  }
+}

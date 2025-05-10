@@ -21,6 +21,30 @@ services:
             value: "any key works"
           - key: PYTHON_VERSION
             value: 3.10.6
+          - key: JWT_API_KEY
+            sync: false
+          - key: ADMIN_USER_PASSWORD
+            sync: false
+          - key: SERVICE_ID
+            sync: false
+          - key: USER_ID
+            sync: false
+          - key: API_URL
+            sync: false
+          - key: TEMPLATE_ID
+            sync: false
+          - key: PRIVATE_KEY
+            sync: false
+          - key: CLOUDINARY_CLOUD
+            sync: false
+          - key: CLOUDINARY_KEY
+            sync: false
+          - key: CLOUDINARY_SECRET
+            sync: false
+          - key: BACKEND_URL
+            sync: false
+          - key: FRONTEND_URL
+            sync: false
           - key: DATABASE_URL # Render PostgreSQL database
             fromDatabase:
                 name: postgresql-trapezoidal-42170

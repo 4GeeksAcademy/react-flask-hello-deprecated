@@ -1,0 +1,62 @@
+.container {
+  margin-top: 2rem;
+}
+
+.card {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+  transition: transform 0.2s;
+  height: 95%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.cardImg {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.cardBody {
+  padding: 1rem;
+  text-align: center;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.cardText {
+  font-size: 1rem;
+  color: #555;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 8px;
+}
+
+.carousel .carousel-item p {
+  font-size: 1.1em;
+}
+
+.carousel .carousel-item h5 {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  .card,
+  .carousel {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

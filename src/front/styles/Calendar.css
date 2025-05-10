@@ -1,0 +1,114 @@
+.react-calendar {
+    font-family: "Poppins", serif !important;
+    border: none;
+    margin: 1rem 0;
+    width: 95%;
+    min-width: 300px;
+    background: rgba(0, 0, 0, 0.0);
+}
+
+/* Estilo de los tiles normales */
+.react-calendar__tile {
+    /* border-radius: 10px; */
+    background: rgba(255, 255, 255, 0.4);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    color: #34495E;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+}
+
+.react-calendar__tile:hover {
+    background-color: #bbdefb;
+    /* Azul más vibrante */
+    color: #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de los tiles seleccionados */
+.react-calendar__tile--active {
+    background-color: #3d4381;
+    /* Azul medio */
+    color: white;
+    font-weight: bold;
+    border: 1px solid #42a5f5;
+    /* border-radius: 10px; */
+}
+
+
+/* Estilo de los días resaltados (eventos) */
+.highlight {
+
+    background-color: #fff372;
+    /* Azul pastel para eventos */
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-holiday {
+    background-color: #109D58;
+    /* Azul pastel para eventos */
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Ocultar el borde por defecto de los tiles */
+.react-calendar__tile:focus {
+    border: solid 1px white;
+}
+
+/* .react-calendar__tile:enabled:focus {
+    border: solid 2px black;
+} */
+
+/* Estilo del encabezado del calendario */
+.react-calendar__navigation {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff00;
+    /* Fondo azul claro */
+    padding: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 50px;
+    border-radius: 5px;
+    font-size: larger;
+}
+
+.react-calendar__navigation button {
+    color: white;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: normal;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+
+    transition: background-color 0.3s ease;
+}
+
+.react-calendar__navigation button::first-letter {
+    text-transform: capitalize;
+}
+
+.react-calendar__navigation button:hover {
+    background-color: #FEEC37;
+}
+
+/* Estilo de los días del encabezado (Lunes, Martes, etc.) */
+.react-calendar__month-view__weekdays {
+    color: white;
+    font-weight: lighter;
+    border-radius: 5px;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    text-decoration-style: none;
+}

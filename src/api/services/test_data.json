@@ -1,0 +1,112 @@
+{
+    "students": [
+        {
+            "nombre": "Deborah",
+            "apellido": "Coleman",
+            "fecha_nacimiento": "2009-10-27",
+            "fecha_ingreso": "2024-11-01"
+        },
+        {
+            "nombre": "Ronald",
+            "apellido": "King",
+            "fecha_nacimiento": "2015-11-01",
+            "fecha_ingreso": "2024-11-03"
+        },
+        {
+            "nombre": "Julia",
+            "apellido": "Short",
+            "fecha_nacimiento": "2010-03-27",
+            "fecha_ingreso": "2024-11-12"
+        },
+        {
+            "nombre": "James",
+            "apellido": "Mendoza",
+            "fecha_nacimiento": "2015-12-25",
+            "fecha_ingreso": "2024-11-09"
+        },
+        {
+            "nombre": "Karen",
+            "apellido": "Lloyd",
+            "fecha_nacimiento": "2013-04-18",
+            "fecha_ingreso": "2024-11-09"
+        },
+        {
+            "nombre": "Jeremy",
+            "apellido": "Shaw",
+            "fecha_nacimiento": "2008-02-01",
+            "fecha_ingreso": "2024-11-01"
+        }
+    ],
+    "teachers": [
+        {
+            "email": "Heather@test.com",
+            "nombre": "Heather",
+            "apellido": "Abbott",
+            "direccion": "Port Jenniferhaven - 71293 Paul Oval",
+            "telefono": "341-461-6838x144",
+            "descripcion": "Minute true act. Democratic to say player simply feel job value.\nYard project top.",
+            "foto": "https://placehold.co/250"
+        },
+        {
+            "email": "Shannon@test.com",
+            "nombre": "Shannon",
+            "apellido": "Chandler",
+            "direccion": "North Dawn - 31536 William Street",
+            "telefono": "(717)864-5682x983",
+            "descripcion": "See arm remember air happy card system.",
+            "foto": "https://placehold.co/250"
+        },
+        {
+            "email": "Mark@test.com",
+            "nombre": "Mark",
+            "apellido": "Hodge",
+            "direccion": "Coxland - 568 Crosby Ville Suite 992",
+            "telefono": "523.214.1950",
+            "descripcion": "Responsibility build mother us strong. Apply south view fill song gun.",
+            "foto": "https://placehold.co/250"
+        }
+    ],
+    "parents": [
+        {
+            "email": "Lisa@test.com",
+            "nombre": "Lisa",
+            "apellido": "Wright",
+            "direccion": "North Dianatown - 73556 Michael Center Suite 894",
+            "telefono": "867-832-3028x139"
+        },
+        {
+            "email": "Jeremy@test.com",
+            "nombre": "Jeremy",
+            "apellido": "Dean",
+            "direccion": "East Daniel - 00937 Norris Trafficway Apt. 534",
+            "telefono": "+1-843-685-0403x85259"
+        },
+        {
+            "email": "Jonathan@test.com",
+            "nombre": "Jonathan",
+            "apellido": "Townsend",
+            "direccion": "South Kristopher - 52081 Raymond Centers Suite 001",
+            "telefono": "642-493-8670"
+        }
+    ],
+    "evaluations": [
+        {
+            "nombre": "Chief Financial Officer",
+            "descripcion": "Material society control education.",
+            "fecha": "2024-11-13",
+            "finalizada": true
+        },
+        {
+            "nombre": "Claims inspector/assessor",
+            "descripcion": "Bit decade either away off property police.",
+            "fecha": "2024-11-02",
+            "finalizada": true
+        },
+        {
+            "nombre": "Civil engineer, consulting",
+            "descripcion": "Whose air trial son thank well buy lawyer.",
+            "fecha": "2024-11-12",
+            "finalizada": true
+        }
+    ]
+}

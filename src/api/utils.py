@@ -1,4 +1,10 @@
-from flask import jsonify, url_for
+from flask import Flask,jsonify, url_for
+from flask_bcrypt import Bcrypt
+
+
+
+app = Flask(__name__)
+bcrypt = Bcrypt(app)
 
 class APIException(Exception):
     status_code = 400

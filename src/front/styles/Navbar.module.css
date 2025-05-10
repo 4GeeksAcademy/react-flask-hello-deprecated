@@ -1,0 +1,444 @@
+.dashboard-icon {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.ItemAvatar {
+  background-image: linear-gradient(to right, rgba(31, 118, 146, 0.5), rgba(67, 56, 135, 0.5));
+  border-radius: 8px;
+  border: none;
+  padding: 10px;
+  min-width: 10%;
+  position: absolute;
+  right: -10px;
+}
+
+.ItemAvatarButtom {
+  color: #ffffff;
+  font-weight: bold;
+  /* padding: 10px; */
+  min-width: 100px;
+}
+
+.ItemAvatarButtom:hover {
+  color: Black;
+  font-weight: bolder;
+  background-color: transparent;
+}
+
+.Toggle {
+  border: "none";
+  background: "transparent";
+  cursor: "pointer";
+  padding: 10px 15px;
+}
+
+.Toggle::after {
+  display: none;
+  /*asi no se ve el "triángulo invertido" */
+}
+
+.navbar-avatar {
+  margin-right: 20px;
+  /* Separa el avatar del borde derecho */
+}
+
+/* estilos para la campana de notificaciones */
+.campana-container {
+  position: relative;
+  display: inline-block;
+}
+
+.campana {
+  font-size: 30px;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+.campanaConNotificacion {
+  color: #ffc107 !important;
+  font-size: 30px;
+}
+
+.notificacionDot {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform: translate(50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* --------------------*/
+.dashboard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #060707;
+  z-index: 999;
+}
+
+.navbar-custom {
+  /* este class modifica directamente la navbar */
+  background-color: #2b2d42;
+  font-weight: bold;
+  justify-content: flex-start;
+  color: white;
+  height: 100px;
+  overflow: visible;
+}
+
+#basic-navbar-nav {
+  transition: max-height 1.5s ease;
+  max-height: 0;
+  color: white;
+}
+
+.collapseCustom {
+  background-color: #2b2d42;
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  overflow: visible;
+  width: fit-content;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.collapseCustom.show {
+  max-height: 500px;
+  right: 10px;
+  max-width: 25%;
+  background: none;
+  width: fit-content;
+  text-align: center;
+}
+
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  padding: 0.4em;
+  position: relative;
+  margin-left: auto;
+}
+
+.navbar-toggler-icon {
+  position: relative;
+  width: 25px;
+  height: 3px;
+  transition: all 1.3s ease;
+}
+
+.navbar-toggler:hover {
+  background-color: #bbbaaa !important;
+}
+
+.navbar-toggler:focus {
+  color: transparent !important;
+}
+
+/* modificación desde acá en los botones del navbar utilizando pseudoelementos*/
+.NavButton {
+  cursor: pointer;
+  background-color: #2b2d42;
+  margin: 5px 10px;
+  font-size: large;
+  font-family: inherit;
+  color: white !important;
+  position: relative;
+  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+}
+
+/* Efecto de línea animada debajo */
+.NavButton::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  bottom: -2px;
+  left: 0;
+  transition: width 0.4s ease;
+}
+
+.NavButton:hover::after {
+  width: 100%;
+}
+
+/* Efecto con punto decorativo */
+.NavButton::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: cyan;
+  border-radius: 50%;
+  left: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.NavButton:hover::before {
+  opacity: 0.75;
+  transform: translateY(-50%) scale(1.2);
+}
+
+/* Estado activo con escala y cambio de color */
+.NavButton:active {
+  color: #bbb;
+  transform: scale(0.95);
+}
+
+.NavButton:active::before {
+  background-color: yellow;
+}
+
+/* styles del chatComponent */
+
+/* Contenedor principal del chat */
+.chatContainer {
+  display: flex;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(31, 118, 146, 0.5), rgba(67, 56, 135, 0.5));
+  height: 650px;
+}
+
+/* Sección de Contactos (35%) */
+.chatContacts {
+  width: 35%;
+  overflow-y: auto;
+  /*cambio hidden por auto para probar el scroll*/
+  padding: 10px;
+  color: white;
+  font-weight: 500;
+  height: -webkit-fill-available;
+}
+
+/* Sección de Mensajes (65%) */
+.chatMessages {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  background-image: linear-gradient(to right, rgba(31, 118, 146, 0.5), rgba(67, 56, 135, 0.5));
+  height: 400px;
+  color: whitesmoke;
+}
+
+/* CardHeader para la parte superior */
+.CardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 15px 15px 0px 0px !important;
+  position: relative;
+  background-image: linear-gradient(to right, rgba(31, 118, 146, 0.5), rgba(67, 56, 135, 0.5));
+}
+
+.CardHeader h5 {
+  font-size: 20px;
+}
+
+.chatContacts h6 {
+  font-size: 16px;
+}
+
+.chatContacts select {
+  margin-bottom: 10px;
+}
+
+.chatContacts div {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.chatContacts div.bg-info {
+  background-color: #17a2b8 !important;
+  color: white !important;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-image: linear-gradient(to right, rgba(31, 118, 146, 0.5), rgba(67, 56, 135, 0.5));
+}
+
+.card-footer input {
+  align-items: center;
+  width: 90%;
+  height: 50px;
+}
+
+.card-footer button {
+  width: 100%;
+}
+
+.card-body {
+  background-image: linear-gradient(to right, rgba(31, 118, 146, 0.5), rgba(67, 56, 135, 0.5));
+}
+
+.card-body>.mb-3 {
+  background-image: linear-gradient(to right, rgba(31, 118, 146, 0.5), rgba(67, 56, 135, 0.5));
+}
+
+
+/* cambios del scroll Para navegadores WebKit */
+.chatMessages::-webkit-scrollbar,
+.contactos::-webkit-scrollbar {
+  width: 14px;
+}
+
+.chatMessages::-webkit-scrollbar-track,
+.contactos::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.chatMessages::-webkit-scrollbar-thumb,
+.contactos::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #0d47a1, #0d47a1 25%, #1565c0 50%, #1976d2 75%, #1e88e5);
+  border-radius: 10px;
+  border: 3px solid #1a1a1a;
+}
+
+.chatMessages::-webkit-scrollbar-thumb:hover,
+.contactos::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg,
+      #0A74DA,
+      /* Azul brillante (primario) */
+      #00A3FF 25%,
+      /* Azul cian vibrante */
+      #0066FF 50%,
+      /* Azul medio clásico */
+      #0052CC 75%,
+      /* Azul profundo */
+      #002244
+      /* Azul marino oscuro */
+    );
+  border: 3px solid gainsboro;
+}
+
+/* Botón de cerrar */
+.closeChat {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.closeChat:hover {
+  transform: scale(1.2) translateY(-50%) rotate(0.5turn);
+  color: yellow;
+}
+
+.closing {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* estilos del botón de envío del chatComponent */
+
+.buttonChatComponent {
+  position: relative;
+  padding: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 4px;
+  background: rgb(61, 106, 255);
+  color: #FFFFFF;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  margin-top: 2%;
+  width: 250px !important;
+}
+
+.buttonChatComponent:hover {
+  border: 1px solid rgb(0, 0, 0);
+  color: white;
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.buttonChatComponent:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+.buttonChatComponent::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+.buttonChatComponent:focus {
+  outline-style: solid;
+  outline-color: #2b2d42;
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+.buttonChatComponent:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
