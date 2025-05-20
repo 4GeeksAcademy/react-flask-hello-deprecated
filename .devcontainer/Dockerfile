@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/python:0-3.10
+FROM mcr.microsoft.com/devcontainers/python:3.13
 
 ENV PYTHONUNBUFFERED 1
 

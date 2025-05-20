@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import envFile from "../../../../docs/assets/env-file.png"
+import envFile from "../../../docs/assets/env-file.png"
 
 const Dark = ({children}) => <span className="bg-dark text-white px-1 rounded">{children}</span>;
 export const BackendURL = () => (
@@ -12,10 +12,12 @@ export const BackendURL = () => (
 			<li>Make sure you backend is running on port 3001.</li>
 			<li>Open your API and copy the API host.</li>
 			<li>Open the .env file (do not open the .env.example)</li>
-			<li>Add a new variable BACKEND_URL=<Dark>your api host</Dark></li>
+			<li>Add a new variable VITE_BACKEND_URL=<Dark>your api host</Dark></li>
 			<li>Replace <Dark>your api host</Dark> with the public API URL of your flask backend sever running at port 3001</li>
 		</ol>
-		<img src={envFile} />
+		<div className="w-100">
+		<img src={envFile} className="w-100"/>
+		</div>
 		<p>Note: If you are publishing your website to Heroku, Render.com or any other hosting you probably need to follow other steps.</p>
 	</div>
 );
