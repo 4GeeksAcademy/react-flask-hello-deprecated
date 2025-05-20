@@ -2,10 +2,10 @@
 
 Build web applications using React.js for the front end and python/flask for your backend API.
 
-- Documentation can be found here: https://start.4geeksacademy.com/starters/react-flask
+- Documentation can be found here: https://4geeks.com/docs/start/react-flask-template
 - Here is a video on [how to use this template](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b)
 - Integrated with Pipenv for package managing.
-- Fast deployment to heroku [in just a few steps here](https://start.4geeksacademy.com/backend/deploy-heroku-posgres).
+- Fast deployment to Render [in just a few steps here](https://4geeks.com/docs/start/deploy-to-render-com).
 - Use of .env file.
 - SQLAlchemy integration for database abstraction.
 
@@ -13,7 +13,7 @@ Build web applications using React.js for the front end and python/flask for you
 
 > If you use Github Codespaces (recommended) or Gitpod this template will already come with Python, Node and the Posgres Database installed. If you are working locally make sure to install Python 3.10, Node 
 
-It is recomended to install the backend first, make sure you have Python 3.8, Pipenv and a database engine (Posgress recomended)
+It is recomended to install the backend first, make sure you have Python 3.10, Pipenv and a database engine (Posgress recomended)
 
 1. Install the python packages: `$ pipenv install`
 2. Create a .env file based on the .env.example: `$ cp .env.example .env`
@@ -65,14 +65,14 @@ Every Github codespace environment will have **its own database**, so if you're 
 
 ### Front-End Manual Installation:
 
--   Make sure you are using node version 14+ and that you have already successfully installed and runned the backend.
+-   Make sure you are using node version 20 and that you have already successfully installed and runned the backend.
 
 1. Install the packages: `$ npm install`
 2. Start coding! start the webpack dev server `$ npm run start`
 
 ## Publish your website!
 
-This boilerplate it's 100% read to deploy with Render.com and Heroku in a matter of minutes. Please read the [official documentation about it](https://start.4geeksacademy.com/deploy).
+This boilerplate it's 100% read to deploy with Render.com and Heroku in a matter of minutes. Please read the [official documentation about it](https://4geeks.com/docs/start/deploy-to-render-com).
 
 ### Contributors
 
