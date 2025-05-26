@@ -26,6 +26,14 @@
 	"onCreateCommand": "(cp .env.example .env || echo \".env creation failed\"); (pipenv install || echo \"pipenv install failed\"); (bash database.sh || echo \"database.sh failed\");",
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "python docs/assets/greeting.py both > /workspaces/.codespaces/shared/first-run-notice.txt && npm install",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"esbenp.prettier-vscode",
+				"ms-python.autopep8"
+			]
+		}
+	},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"

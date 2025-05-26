@@ -3,9 +3,11 @@
       "en": "WebApp Template with React JS and Flask API",
       "es": "Plantilla de WebApp con React JS y Flask API"
     },
-    "description": {
-      "us": "Build web applications effortlessly with our React.js and Flask API boilerplate. Learn to deploy in minutes—discover the template now!",
-      "es": "Crea aplicaciones web sin esfuerzo con nuestro boilerplate de React.js y Flask API. Aprende a desplegar en minutos—¡descubre la plantilla ahora!"
+  "description": {
+  "en": "Build web applications using React.js for the front end and python/flask for your backend API.",
+  "us": "Build web applications effortlessly with our React.js and Flask API boilerplate. Learn to deploy in minutes—discover the template now!",
+  "es": "Crea aplicaciones web sin esfuerzo con nuestro boilerplate de React.js y Flask API. Aprende a desplegar en minutos—¡descubre la plantilla ahora!"
+},
     },
     "slug": "react-flask-webapp-template",
     "difficulty": "intermediate",
