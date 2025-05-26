@@ -1,4 +1,4 @@
-Added a button component.
+Fix button color
 # WebApp boilerplate with React JS and Flask API
 
 Build web applications using React.js for the front end and python/flask for your backend API.
