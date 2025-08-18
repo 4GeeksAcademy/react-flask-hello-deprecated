@@ -1,0 +1,93 @@
+.navbar {
+	background-color: rgba(0, 0, 0, 0.308);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 8px;  /* ↓ bajamos padding */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	height: 65px;  /* Altura fija para todo el navbar */
+}
+
+.navbar-logo img {
+	height: 45px;  /* ↓ antes 48px */
+}
+
+.navbar-links {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	gap: 20px;  /* ↓ antes 30px */
+	align-items: center;
+}
+
+.navbar-links a {
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 14px; /* ↓ antes 16px */
+	transition: color 0.3s ease;
+}
+
+.contact-button {
+	background-color: #00d1b2;
+	color: white !important;
+	padding: 6px 14px;  /* ↓ antes 8px 18px */
+	border-radius: 20px;  /* ↓ un poco más pequeño */
+	font-weight: bold;
+	transition: background-color 0.3s ease;
+}
+
+
+/* Dropdown ERP / Desarrollo Web */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  display: inline-block;
+  padding: 6px 8px;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 4px;
+  padding: 6px 0;
+  margin-top: 4px;
+  list-style: none;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 2000;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 16px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #00d1b2;
+  color: white;
+  border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}

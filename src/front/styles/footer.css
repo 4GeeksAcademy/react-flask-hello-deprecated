@@ -1,0 +1,36 @@
+.custom-footer {
+  background-color: #081c3a; /* azul oscuro */
+  color: white;
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+
+
+.footer-logo {
+	width: 180px;
+	margin-bottom: 20px;
+}
+
+.footer-social a {
+	color: rgb(33, 107, 181);
+	font-size: 1.5rem;
+	margin: 0 10px;
+	transition: transform 0.2s, color 0.2s;
+}
+
+.footer-social a:hover {
+	color: #00d1b2; /* color turquesa o el que quieras */
+	transform: scale(1.2);
+}
+
+.footer-text {
+	margin-top: 20px;
+	font-size: 0.9rem;
+	color: #ccc;
+}
+
+hr {
+	border-color: rgba(255, 255, 255, 0.1);
+	width: 60%;
+	margin: 20px auto;
+}
