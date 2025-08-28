@@ -1,7 +1,712 @@
-/*
-    home.css: This website contains selectors only used in home.css
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003087;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  color: #0066cc;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  color: #333;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.text-primary {
+  color: #0066cc !important;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+/* Estilos para la imagen animada */
+.cloud-image {
+  width: 300px;
+  height: 300px;
+  background: url("https://i.pinimg.com/originals/bf/48/11/bf481115335525bfb8779125e7b66d73.gif")
+    no-repeat center;
+  background-size: contain;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-cloud {
+  animation: float 3s infinite ease-in-out;
+}
+
+/* Estilos para las secciones de tecnologías */
+.tech-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tech-section {
+  flex: 1;
+  min-width: 200px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.tech-icons {
+  margin: 10px 0;
+}
+
+.tech-icons a {
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+.card {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Fondo semitransparente blanco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.conclusion-bg {
+  position: relative;
+  z-index: 1;
+}
+
+.conclusion-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.whatsapp-float {
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+#contact-form {
+  background-color: #2e9aa8;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#contact-form .form-control {
+  background-color: #fff;
+  color: #000;
+}
+
+#contact-form .form-label {
+  font-weight: bold;
+}
+
+#contact-form .input-group .form-select {
+  background-color: #fff;
+  color: #000;
+}
+
+/* === HERO SECTION === */
+
+.hero-container {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex; /* Activa Flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  position: relative; /* Evita superposición absoluta */
+  width: 100%;
+  z-index: 0;
+  padding: 0; /* Sin padding */
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  color: white;
+  text-align: center; /* Centra el texto */
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #f0f0f0; /* Color claro para contraste */
+  font-weight: 400;
+}
+
+.hero-button {
+  background-color: #ffffff;
+  color: #007bff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #e2e6ea;
+}
+
+.arrow {
+  margin-left: 8px;
+}
+
+.services-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: #36b0a1;
+  margin-bottom: 50px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #d3d3d3;
+  border-radius: 14px;
+  padding: 35px 30px;
+  width: 320px;
+  text-align: left;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  background-color: #dff5f0;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(54, 176, 161, 0.3);
+  animation: pulseIcon 3s ease-in-out infinite;
+}
+
+.icon {
+  width: 36px;
+  height: 36px;
+  stroke: #36b0a1;
+  stroke-width: 3;
+  fill: none;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #001c30;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Animación pulsante para iconos */
+@keyframes pulseIcon {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 10px rgba(54, 176, 161, 0.3);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 6px 18px rgba(54, 176, 161, 0.5);
+  }
+}
+
+.what-we-do {
+  background-color: #3dbdb3;
+  padding: 60px 20px;
+  color: white;
+}
+
+.what-we-do-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.what-we-do-image img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.what-we-do-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.what-we-do-text h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.what-we-do-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.contact-button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 25px;
+  font-weight: bold;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: white;
+  color: #3dbdb3;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+.tech-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.tech-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #41bfb3;
+  margin-bottom: 40px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.tech-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.tech-card img {
+  height: 40px;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.tech-card img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background: linear-gradient(to right, #2e9aa8, #081c3a);
+  padding: 60px 20px;
+  color: white;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+}
+
+.contact-text {
+  flex: 1;
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.contact-form {
+  flex: 1;
+  background: #f5f5f5;
+  padding: 30px;
+  border-radius: 12px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form .form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-form .form-row input,
+.contact-form .form-row select {
+  flex: 1;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-button {
+  padding: 12px 20px;
+  background-color: #00d1b2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #009e87;
+}
+
+/* Unificar fuente y grosor para todos los títulos y subtítulos */
+h1,
+h2,
+h3,
+.section-title {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+
+/* Estilos para Ecommerce.js */
+.ecommerce-section {
+  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
+  background-color: transparent; /* Sin fondo para que se vea la imagen de fondo */
+}
+
+.ecommerce-section h1,
+.ecommerce-section h2 {
+  color: #36b0a1; /* Ajustar al color principal de Home.js */
+}
+
+.ecommerce-section .btn-primary {
+  background-color: #36b0a1;
+  border-color: #36b0a1;
+}
+
+.ecommerce-section .btn-primary:hover {
+  background-color: #2e9aa8;
+  border-color: #2e9aa8;
+}
+
+.ecommerce-section .btn-outline-primary {
+  color: #36b0a1;
+  border-color: #36b0a1;
+}
+
+.ecommerce-section .btn-outline-primary:hover {
+  background-color: #36b0a1;
+  color: white;
+}
+
+.ecommerce-section .btn-success {
+  background-color: #3dbdb3;
+  border-color: #3dbdb3;
+}
+
+.ecommerce-section .btn-success:hover {
+  background-color: #2e9aa8;
+  border-color: #2e9aa8;
+}
+
+.ecommerce-section .card.border-primary {
+  border-color: #36b0a1 !important;
+}
+
+/* Estilos responsivos para ambas vistas */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .hero-container {
+    height: auto;
+    min-height: 60vh;
+    padding: 15px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .what-we-do-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .what-we-do-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-text {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-form .form-row {
+    flex-direction: column;
+  }
+
+  .ecommerce-section .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ecommerce-section .col-md-2,
+  .ecommerce-section .col-md-4 {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+
+  .ecommerce-section .card {
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .tech-title {
+    font-size: 2rem;
+  }
+
+  .contact-text {
+    font-size: 1.5rem;
+  }
+
+  .whatsapp-float {
+    font-size: 30px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}

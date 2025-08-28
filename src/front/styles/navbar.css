@@ -1,0 +1,256 @@
+/* ====== BASE ====== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(15, 20, 48, 0.9);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  height: 65px;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ====== HAMBURGER ====== */
+.navbar-toggle {
+  display: none;
+  width: 44px;
+  height: 36px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+.navbar-toggle span {
+  display: block;
+  height: 2px;
+  background: #fff;
+  margin: 7px 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.navbar-toggle.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.navbar-toggle.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ====== LINKS (DESKTOP) ====== */
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+   
+}
+.nav-link:hover {
+  color: #36b0a1;
+  background: rgba(248, 242, 242, 0.13);
+}
+
+/* Botón de contacto */
+.contact-button {
+  background-color: #36b0a1;
+  color: #fff !important;
+  padding: 6px 14px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+.contact-button:hover {
+  background: #2c8b7d;
+  transform: translateY(-1px);
+
+}
+.contact-wrapper {
+  margin-left: 8px;
+ 
+}
+
+/* ====== DROPDOWNS (GENERAL) ====== */
+.dropdown .dropdown-toggle {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.dropdown .caret {
+  margin-left: 6px;
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 240px;
+  background: #fff;
+  color: #222;
+  border-radius: 8px;
+  padding: 8px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 2000;
+  
+}
+
+/* Mostrar por clase .open (click/tap) */
+.dropdown.open > .dropdown-menu {
+  display: block;
+
+}
+
+/* Rotar caret al abrir */
+.dropdown.open > .dropdown-toggle .caret {
+  transform: rotate(-135deg);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+.dropdown-item:hover {
+  border-radius: 8px;
+  background: rgb(250, 137, 31);
+  color: #111;
+}
+.dropdown-item small {
+  color: #6c757d;
+  display: block;
+}
+
+/* ====== HOVER SOLO EN DISPOSITIVOS CON PUNTERO FINO (DESKTOP) ====== */
+@media (hover: hover) and (pointer: fine) {
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 991px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    background: rgba(15, 20, 48, 0.98);
+    padding: 10px 12px 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: calc(100vh - 65px);
+    overflow-y: auto;
+  }
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 12px 10px;
+    border-radius: 6px;
+  }
+  .contact-wrapper {
+    margin-left: 0;
+  }
+
+  /* Dropdown en móvil: ocupa ancho y abre hacia abajo con .open */
+  .dropdown-menu {
+    position: static;
+    display: none;
+    background: rgba(255, 255, 255, 0.98);
+    color: #111;
+    margin-top: 4px;
+    border-radius: 8px;
+    width: 100%;
+    padding: 6px 0;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+  }
+  .dropdown.open > .dropdown-menu {
+    display: block !important;
+  }
+}
+
+/* ====== Ajuste para layout fijo (opcional) ====== */
+body.with-fixed-navbar {
+  padding-top: 65px;
+}
+
+/* Eliminar subrayados de todos los elementos del dropdown */
+.dropdown-item,
+.dropdown-item:link, 
+.dropdown-item:visited, 
+.dropdown-item:hover, 
+.dropdown-item:active, 
+.dropdown-item:focus {
+  text-decoration: none !important;
+}
+
+/* Asegurar que los textos dentro del dropdown no tengan subrayado */
+.dropdown-menu div,
+.dropdown-menu small {
+  text-decoration: none !important;
+}
+
+/* Opcional: mejorar el espaciado y aspecto visual */
+.dropdown-item div {
+  line-height: 1.4;
+}
+
+.dropdown-item small {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.75rem;
+  opacity: 0.8;
+ 
+}
