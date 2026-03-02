@@ -7,17 +7,39 @@ from flask_migrate import Migrate
 from flask_swagger import swagger
 from api.utils import APIException, generate_sitemap
 from api.models import db
-from api.routes import api
+from api.routes import api, init_mail
 from api.admin import setup_admin
 from api.commands import setup_commands
+from flask_jwt_extended import JWTManager
+from flask_mail import Mail
+
+app = Flask(__name__)
+
+# Configurar el correo
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # Servidor SMTP de Gmail
+app.config['MAIL_PORT'] = 587  # Puerto SMTP
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_USERNAME'] = 'safehaven4geeks@gmail.com'  # Tu correo electrónico
+app.config['MAIL_PASSWORD'] = 'hudb cair nmvp kyey'  # App Password
+app.config['MAIL_DEFAULT_SENDER'] = 'safehaven4geeks@gmail.com'  # Remitente por defecto
+
+# Inicializar Flask-Mail
+mail = Mail(app)
+init_mail(mail)
+
+# Blueprint
+from api.finances import finances_bp
 
 # from models import Person
-
 ENV = "development" if os.getenv("FLASK_DEBUG") == "1" else "production"
 static_file_dir = os.path.join(os.path.dirname(
     os.path.realpath(__file__)), '../public/')
-app = Flask(__name__)
+#app = Flask(__name__)
 app.url_map.strict_slashes = False
+
+app.config['SECRET_KEY'] = "shhhhh"
+jwt = JWTManager(app)
 
 # database condiguration
 db_url = os.getenv("DATABASE_URL")
@@ -37,19 +59,20 @@ setup_admin(app)
 # add the admin
 setup_commands(app)
 
+# Blueprint de finanzas con un prefijo '/api'
+app.register_blueprint(finances_bp, name = "hola" )
+
+
 # Add all endpoints form the API with a "api" prefix
 app.register_blueprint(api, url_prefix='/api')
 
 # Handle/serialize errors like a JSON object
-
-
 @app.errorhandler(APIException)
 def handle_invalid_usage(error):
     return jsonify(error.to_dict()), error.status_code
 
+
 # generate sitemap with all your endpoints
-
-
 @app.route('/')
 def sitemap():
     if ENV == "development":

@@ -1,81 +1,140 @@
-# WebApp boilerplate with React JS and Flask API
+# Aplicación de Gestión Financiera Personal
 
-Build web applications using React.js for the front end and python/flask for your backend API.
+## Descripción General.
 
-- Documentation can be found here: https://start.4geeksacademy.com/starters/react-flask
-- Here is a video on [how to use this template](https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b)
-- Integrated with Pipenv for package managing.
-- Fast deployment to heroku [in just a few steps here](https://start.4geeksacademy.com/backend/deploy-heroku-posgres).
-- Use of .env file.
-- SQLAlchemy integration for database abstraction.
+Esta aplicación ayuda a los usuarios a registrar sus ingresos, gastos y presupuestos, ofreciendo un análisis detallado de su situación financiera y recomendaciones personalizadas basadas en sus hábitos de consumo. Está diseñada para simplificar la gestión financiera personal con funcionalidades visuales y fáciles de usar.
+En el que aparte puede crear grupos de usuarios con el que compartiran las finanzas y un chat en el que estará fromado por los integrantes del grupo para poder comunicarse entre ellos sin necesidad de una aplicación externa.
 
-### 1) Installation:
+## Funcionalidades Principales..
 
-> If you use Github Codespaces (recommended) or Gitpod this template will already come with Python, Node and the Posgres Database installed. If you are working locally make sure to install Python 3.10, Node 
+1. Registro de Transacciones
 
-It is recomended to install the backend first, make sure you have Python 3.8, Pipenv and a database engine (Posgress recomended)
+- Permite a los usuarios registrar ingresos y gastos, categorizándolos (alimentación, transporte, entretenimiento, etc.).
+- Agregar detalles como monto, fecha, método de pago y notas adicionales.
 
-1. Install the python packages: `$ pipenv install`
-2. Create a .env file based on the .env.example: `$ cp .env.example .env`
-3. Install your database engine and create your database, depending on your database you have to create a DATABASE_URL variable with one of the possible values, make sure you replace the valudes with your database information:
+2. Gestión de Presupuestos
 
-| Engine    | DATABASE_URL                                        |
-| --------- | --------------------------------------------------- |
-| SQLite    | sqlite:////test.db                                  |
-| MySQL     | mysql://username:password@localhost:port/example    |
-| Postgress | postgres://username:password@localhost:5432/example |
+- Creación y seguimiento de presupuestos mensuales por categorías.
+- Alertas si el usuario se acerca a superar el presupuesto.
 
-4. Migrate the migrations: `$ pipenv run migrate` (skip if you have not made changes to the models on the `./src/api/models.py`)
-5. Run the migrations: `$ pipenv run upgrade`
-6. Run the application: `$ pipenv run start`
+3. Visualización de Datos
 
-> Note: Codespaces users can connect to psql by typing: `psql -h localhost -U gitpod example`
+- Gráficos interactivos (barras, pastel, líneas) para mostrar la distribución de gastos e ingresos.
+- Resúmenes financieros diarios, semanales y mensuales.
 
-### Undo a migration
+4. Gestión Multidivisa
 
-You are also able to undo a migration by running
+- Conversión automática de monedas al registrar transacciones en divisas extranjeras, usando una API de tasas de cambio (CurrencyLayer).
 
-```sh
-$ pipenv run downgrade
-```
+5. Autenticación y Seguridad
 
-### Backend Populate Table Users
+- Registro de usuarios con correo electrónico y autenticación (por ejemplo, JWT).
+- Cifrado de datos sensibles.
 
-To insert test users in the database execute the following command:
+6. Integración con Bancos y Tarjetas (Opcional Avanzado)
 
-```sh
-$ flask insert-test-users 5
-```
+- Sincronización automática de cuentas bancarias y tarjetas para importar transacciones usando una API como Plaid o FinBox.
 
-And you will see the following message:
+7. Grupos de usuarios
 
-```
-  Creating test users
-  test_user1@test.com created.
-  test_user2@test.com created.
-  test_user3@test.com created.
-  test_user4@test.com created.
-  test_user5@test.com created.
-  Users created successfully!
-```
+- Grupos formados por usuarios en los que son invitados mediante un token o invitacion.
+- Compartir las finanzas con el resto de usuarios del grupo.
 
-### **Important note for the database and the data inside it**
+8. Chat entre usuarios
 
-Every Github codespace environment will have **its own database**, so if you're working with more people eveyone will have a different database and different records inside it. This data **will be lost**, so don't spend too much time manually creating records for testing, instead, you can automate adding records to your database by editing ```commands.py``` file inside ```/src/api``` folder. Edit line 32 function ```insert_test_data``` to insert the data according to your model (use the function ```insert_test_users``` above as an example). Then, all you need to do is run ```pipenv run insert-test-data```.
+- Compartir un chat global por cada grupo sin necesidad de usar otra aplicación externa.
+- Por ejemplo un chat de telegram o appWrite
 
-### Front-End Manual Installation:
+9. Otros Extras
 
--   Make sure you are using node version 14+ and that you have already successfully installed and runned the backend.
+- Recordatorios automáticos para pagos recurrentes (facturas, rentas, etc.).
+- Modo oscuro y personalización de temas.
 
-1. Install the packages: `$ npm install`
-2. Start coding! start the webpack dev server `$ npm run start`
+## Tecnologías Sugeridas
 
-## Publish your website!
+### Frontend
 
-This boilerplate it's 100% read to deploy with Render.com and Heroku in a matter of minutes. Please read the [official documentation about it](https://start.4geeksacademy.com/deploy).
+- **React**: Para construir la interfaz de usuario.
+- **Librerías de diseño**: Material-UI, Chakra UI, o TailwindCSS.
+- **Librería para gráficos**: Chart.js o Recharts.
 
-### Contributors
+### Backend
 
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
+- **Python con Flask**: Para construir la API.
+- **Autenticación**: JWT.
+- **Base de datos**: MySQL.
 
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
+### APIs Externas
+
+- **CurrencyLayer o ExchangeRate-API**: Para conversión de divisas en tiempo real.
+- **Plaid API**: Para integración bancaria y automatización de transacciones.
+- **Telegram o appWrite**: Para chat global de usuarios.
+
+## Estructura del Proyecto
+
+### Páginas principales
+
+- **Login**:
+  - Donde el usuario podrá acceder a su apartado personal.
+- **Singup**:
+  - El usuario podrá crearse una cuenta para acceder
+  - Opcional: cifrar contrseñas
+- **Inicio**:
+  - Resumen general de finanzas.
+  - Gráficos de ingresos/gastos.
+- **Registro de Transacciones**:
+  - Formulario para agregar o editar ingresos y gastos.
+- **Presupuesto**:
+  - Gestión de presupuestos y seguimiento.
+- **Finanzas en Grupo**:
+  - Todos los usuarios comparten las mismas finanzas.
+- **Chat global**:
+  - Donde los usuarios tendrán un chat para comunicarse entre ellos.
+- **Análisis**:
+  - Panel con recomendaciones personalizadas.
+- **Configuración**:
+  - Gestión de cuenta, temas, exportación de datos.
+
+### Endpoints principales
+
+- `/auth`:
+  - Registro, inicio de sesión, y autenticación de usuarios.
+- `/transactions`:
+  - CRUD de ingresos y gastos.
+- `/budget`:
+  - Gestión de presupuestos.
+- `/analysis`:
+  - Generación de análisis y recomendaciones.
+- `/currency`:
+  - Conversión de divisas usando una API externa.
+
+#### Base de datos
+
+- **Tablas principales**:
+  - **Usuarios**: Información de usuarios.
+  - **Transacciones**: Detalles de ingresos y gastos.
+  - **Presupuestos**: Configuración de presupuestos por categorías.
+  - **Historial de conversión**: Tasas de cambio registradas.
+  - **Grupos**: Usuarios que forman parte del grupo.
+
+## Desafíos Técnicos
+
+### Sincronización bancaria
+
+- Implementar APIs como Plaid puede requerir configuraciones avanzadas y manejo de datos sensibles.
+
+### Análisis de datos
+
+- Construir algoritmos personalizados para detectar patrones y generar recomendaciones útiles.
+
+### Visualización de gráficos
+
+- Asegurar que las visualizaciones sean interactivas y actualicen datos en tiempo real.
+
+### Escalabilidad
+
+- Manejar múltiples usuarios y grandes volúmenes de datos transaccionales de forma eficiente.
+
+### Chat
+
+- Lograr un chat en tiempo real de usuarios.
